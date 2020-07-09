@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.t-io:tio-core:3.5.9.v20200214-RELEASE">
+    <CLASSES>
+      <root url="jar://D:/maven/storehouse/org/t-io/tio-core/3.5.9.v20200214-RELEASE/tio-core-3.5.9.v20200214-RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/maven/storehouse/org/t-io/tio-core/3.5.9.v20200214-RELEASE/tio-core-3.5.9.v20200214-RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/maven/storehouse/org/t-io/tio-core/3.5.9.v20200214-RELEASE/tio-core-3.5.9.v20200214-RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
