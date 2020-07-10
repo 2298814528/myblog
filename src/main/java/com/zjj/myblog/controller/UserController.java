@@ -28,5 +28,8 @@ public class UserController {
     public String index(){
         return "option/index";
     }
-
+    @RequestMapping("/add")
+    public String add(){
+        return "option/add";
+    }
 }
