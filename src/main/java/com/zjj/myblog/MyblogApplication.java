@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MyblogApplication {
 
     public static void main(String[] args) {
+        System.out.println("http://localhost:8080/blog");
         SpringApplication.run(MyblogApplication.class, args);
     }
 
