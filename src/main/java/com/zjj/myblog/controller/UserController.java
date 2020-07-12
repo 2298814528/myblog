@@ -32,4 +32,8 @@ public class UserController {
     public String add(){
         return "option/add";
     }
+    @RequestMapping("/register")
+    public String register(){
+        return "user/reg";
+    }
 }
