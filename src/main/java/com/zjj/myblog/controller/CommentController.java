@@ -1,7 +1,6 @@
 package com.zjj.myblog.controller;
 
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -12,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author author
- * @since 2020-07-11
+ * @since 2020-07-12
  */
-@Controller
+@RestController
 @RequestMapping("/comment")
 public class CommentController {
 
