@@ -47,11 +47,11 @@
         <!-- 登入后的状态 -->
         <ul class="layui-nav fly-nav-user" th:if="${not #strings.isEmpty(session.username)}">
             <li class="layui-nav-item">
-                <a class="fly-nav-avatar" href="javascript:void(0);">
+                <a class="fly-nav-avatar" href="javascript:;">
                     <cite class="layui-hide-xs" th:text="${session.username}">xxx</cite>
                     <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：zjj"></i>
                     <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="${session.vipLevel}">VIP0</i>
-                    <img  th:src="'upload/'+${session.avatar}">
+                    <img style="height: 30px;width: 30px" th:src="'upload/'+${session.avatar}">
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a th:href="@{/set}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -62,7 +62,6 @@
                     <dd><a th:href="@{/logout}" style="text-align: center;">退出</a></dd>
                 </dl>
             </li>
-
         </ul>
     </div>
 </div>

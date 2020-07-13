@@ -48,18 +48,17 @@ public class UserActionController {
      */
     @RequestMapping("/loginUser")
     public String login(String username, String password, Model model, HttpSession session) {
-        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
-        QueryWrapper<User> eq = userQueryWrapper.eq("username", username).eq("password", password);
-        User user = userMapper.selectOne(eq);
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<User>().eq("username", username).eq("password", password);
+        User user = userMapper.selectOne(userQueryWrapper);
         if (user == null) {
             model.addAttribute("error", "账号或密码错误");
             return "user/login";
         } else {
             session.setAttribute("username", username);
             session.setAttribute("avatar", user.getAvatar());
-            System.out.println(user.getAvatar());
+            session.setAttribute("signIn", user.getSingIn());
             session.setAttribute("vipLevel", "VIP" + user.getVipLevel());
-            return "index";
+            return "redirect:/index";
         }
     }
 
@@ -98,6 +97,4 @@ public class UserActionController {
             return "user/reg";
         }
     }
-
-
 }
