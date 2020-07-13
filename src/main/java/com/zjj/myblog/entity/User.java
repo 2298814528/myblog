@@ -1,9 +1,15 @@
 package com.zjj.myblog.entity;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import cn.hutool.core.date.DateTime;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
@@ -12,9 +18,10 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author author
- * @since 2020-07-11
+ * @since 2020-07-12
  */
 @Data
+@Setter
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 public class User implements Serializable {
@@ -69,7 +76,7 @@ public class User implements Serializable {
     /**
      * 生日
      */
-    private LocalDateTime birthday;
+    private LocalDate birthday;
 
     /**
      * 头像
@@ -90,6 +97,21 @@ public class User implements Serializable {
      * 最后的登陆时间
      */
     private LocalDateTime lasted;
+    /**
+     * 状态
+     */
+    @TableField("status")
+    private int status;
+    /**
+     * 创建日期
+     */
+    @TableField("created")
+    private Timestamp created;
+    /**
+     * 最后修改的时间
+     */
+    @TableField("modified")
+    private Timestamp modified;
 
 
 }

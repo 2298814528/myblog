@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -53,14 +54,13 @@ public class UserController {
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
         QueryWrapper<User> eq = userQueryWrapper.eq("username", username).eq("password", password);
         User user = userMapper.selectOne(eq);
-//        if (user == null) {
-//            model.addAttribute("error", "账号或密码错误");
-//            return "user/login";
-//        } else {
-//            session.setAttribute("user", username);
-//            return "index";
-//        }
-        return "4xx";
+        if (user == null) {
+            model.addAttribute("error", "账号或密码错误");
+            return "user/login";
+        } else {
+            session.setAttribute("user", username);
+            return "index";
+        }
     }
 
     @RequestMapping("/register")
@@ -82,8 +82,9 @@ public class UserController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        user.setCreated(DateTime.now()); // 2008-9-4 20:02:10)
-        user.setModified(DateTime.now());
+        LocalDateTime now = LocalDateTime.now();
+        user.setCreated(Timestamp.valueOf(now)); // 2008-9-4 20:02:10)
+        user.setModified(Timestamp.valueOf(now));
         int insert = userMapper.insert(user);
         if (insert > 0) {
             return "user/login";
