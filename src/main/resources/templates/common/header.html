@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <link rel="stylesheet" href="res/layui/css/layui.css">
-  <link rel="stylesheet" href="res/css/global.css">
+    <link rel="stylesheet" href="res/layui/css/layui.css">
+    <link rel="stylesheet" href="res/css/global.css">
 </head>
 <body>
 <div class="fly-header layui-bg-black" th:fragment="topbar1">
@@ -16,20 +16,18 @@
             <li class="layui-nav-item layui-this">
                 <a href="https://github.com/2298814528/myblog"><i class="iconfont icon-jiaoliu"></i>源码</a>
             </li>
-<!--            <li class="layui-nav-item">-->
-<!--                <a href="case/case.html"><i class="iconfont icon-iconmingxinganli"></i>案例</a>-->
-<!--            </li>-->
+            <!--            <li class="layui-nav-item">-->
+            <!--                <a href="case/case.html"><i class="iconfont icon-iconmingxinganli"></i>案例</a>-->
+            <!--            </li>-->
 
             <li class="layui-nav-item">
                 <a th:href="@{/technology}" target="_blank"><i class="iconfont icon-ui"></i>所用技术</a>
             </li>
         </ul>
-
-        <ul class="layui-nav fly-nav-user">
-
-            <!-- 未登入的状态 -->
+        <!-- 未登入的状态 -->
+        <ul class="layui-nav fly-nav-user" th:if="${#strings.isEmpty(session.username)}">
             <li class="layui-nav-item">
-                <a class="iconfont icon-touxiang layui-hide-xs" th:href="@{/user/login.html}"></a>
+                <a class="iconfont icon-touxiang layui-hide-xs" th:href="@{/login}"></a>
             </li>
             <li class="layui-nav-item">
                 <a th:href="@{/login}">登录</a>
@@ -45,28 +43,30 @@
                 <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入"
                    class="iconfont icon-weibo"></a>
             </li>
-
-            <!-- 登入后的状态 -->
-            <!--
+        </ul>
+        <!-- 登入后的状态 -->
+        <ul class="layui-nav fly-nav-user" th:if="${not #strings.isEmpty(session.username)}">
             <li class="layui-nav-item">
-              <a class="fly-nav-avatar" href="javascript:;">
-                <cite class="layui-hide-xs">贤心</cite>
-                <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
-                <i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>
-                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
-              </a>
-              <dl class="layui-nav-child">
-                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
-                <hr style="margin: 5px 0;">
-                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
-              </dl>
+                <a class="fly-nav-avatar" href="javascript:void(0);">
+                    <cite class="layui-hide-xs" th:text="${session.username}">xxx</cite>
+                    <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：zjj"></i>
+                    <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="${session.vipLevel}">VIP0</i>
+                    <img  th:src="'upload/'+${session.avatar}">
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a th:href="@{/set}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                    <dd><a th:href="@{/message}"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                    <dd><a th:href="@{/home}"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a>
+                    </dd>
+                    <hr style="margin: 5px 0;">
+                    <dd><a th:href="@{/logout}" style="text-align: center;">退出</a></dd>
+                </dl>
             </li>
-            -->
+
         </ul>
     </div>
 </div>
+
 <div class="fly-panel fly-column" th:fragment="topbar2">
     <div class="layui-container">
         <ul class="layui-clear">

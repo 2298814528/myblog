@@ -41,57 +41,15 @@ import java.util.*;
 public class UserController {
     @Autowired
     UserMapper userMapper;
-    @Autowired
-    FileUpload fileUpload;
 
     @RequestMapping("/login")
     public String loginHtml() {
         return "user/login";
     }
 
-    @RequestMapping("/loginUser")
-    public String login(String username, String password, Model model, HttpSession session) {
-        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
-        QueryWrapper<User> eq = userQueryWrapper.eq("username", username).eq("password", password);
-        User user = userMapper.selectOne(eq);
-        if (user == null) {
-            model.addAttribute("error", "账号或密码错误");
-            return "user/login";
-        } else {
-            session.setAttribute("user", username);
-            return "index";
-        }
-    }
-
     @RequestMapping("/register")
     public String registerHTML() {
         return "user/reg";
-    }
-
-    @RequestMapping("/registerUser")
-    public String register(User user, Model model, @RequestParam("date") String date, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
-        //设置生日
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate time = LocalDate.parse(date, dateTimeFormatter);
-        user.setBirthday(time);
-        System.out.println(user);
-        String path = request.getServletContext().getRealPath("/upload/");
-        try {
-            String filePath = fileUpload.upload(file, path);
-            user.setAvatar(filePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        LocalDateTime now = LocalDateTime.now();
-        user.setCreated(Timestamp.valueOf(now)); // 2008-9-4 20:02:10)
-        user.setModified(Timestamp.valueOf(now));
-        int insert = userMapper.insert(user);
-        if (insert > 0) {
-            return "user/login";
-        } else {
-            model.addAttribute("error","注册失败");
-            return "user/reg";
-        }
     }
 
     @RequestMapping("/technology")

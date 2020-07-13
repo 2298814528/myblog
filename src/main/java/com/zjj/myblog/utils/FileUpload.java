@@ -22,7 +22,7 @@ public class FileUpload {
                 filepath.getParentFile().mkdirs();
             }// 将上传文件保存到目标文件目录
             file.transferTo(new File(path + File.separator + fileName));
-            return path+fileName;
+            return fileName;
         } else {
             return "error";
         }
