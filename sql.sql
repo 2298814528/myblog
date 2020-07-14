@@ -179,3 +179,15 @@ CREATE TABLE `user_message` (
 -- ----------------------------
 -- Records of m_user_message
 -- ----------------------------
+-- 签到表  ID username 签到时间
+CREATE TABLE usersign (
+	id INT(5) PRIMARY KEY AUTO_INCREMENT COMMENT '主键',
+	USER VARCHAR(50) NOT NULL COMMENT '用户名',
+	signTime DATE NOT NULL COMMENT '签到时间'
+	) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC COMMENT '签到表';
+-- 登录表  ID username 登陆时间
+CREATE TABLE userlog (
+	id INT(5) PRIMARY KEY AUTO_INCREMENT COMMENT '主键',
+	USER VARCHAR(50) NOT NULL COMMENT '用户名',
+	logTime TIMESTAMP NOT NULL COMMENT '登陆时间'
+	) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC COMMENT '登录表';

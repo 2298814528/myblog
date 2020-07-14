@@ -112,11 +112,5 @@ public class User implements Serializable {
      */
     @TableField("modified")
     private Timestamp modified;
-    /**
-     * 最后修改的时间
-     */
-    @TableField("signin")
-    private int singIn;
-
 
 }

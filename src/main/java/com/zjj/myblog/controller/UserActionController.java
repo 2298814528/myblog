@@ -3,8 +3,16 @@ package com.zjj.myblog.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.zjj.myblog.entity.User;
+import com.zjj.myblog.entity.Userlog;
+import com.zjj.myblog.entity.Usersign;
 import com.zjj.myblog.mapper.UserMapper;
+import com.zjj.myblog.mapper.UserlogMapper;
+import com.zjj.myblog.mapper.UsersignMapper;
+import com.zjj.myblog.service.UserService;
+import com.zjj.myblog.service.UserlogService;
+import com.zjj.myblog.service.UsersignService;
 import com.zjj.myblog.utils.FileUpload;
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +29,8 @@ import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -33,7 +43,11 @@ import java.time.format.DateTimeFormatter;
 @Controller
 public class UserActionController {
     @Autowired
-    UserMapper userMapper;
+    UserlogService userlogService;
+    @Autowired
+    UsersignService usersignService;
+    @Autowired
+    UserService userService;
     @Autowired
     FileUpload fileUpload;
 
@@ -49,14 +63,36 @@ public class UserActionController {
     @RequestMapping("/loginUser")
     public String login(String username, String password, Model model, HttpSession session) {
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<User>().eq("username", username).eq("password", password);
-        User user = userMapper.selectOne(userQueryWrapper);
+        User user = userService.getOne(userQueryWrapper);
         if (user == null) {
             model.addAttribute("error", "账号或密码错误");
             return "user/login";
         } else {
+//            插入登录表
+            Userlog userlog = new Userlog();
+            userlog.setLogTime(Timestamp.valueOf(LocalDateTime.now()));
+            userlog.setUser(username);
+            userlogService.save(userlog);
+            QueryWrapper<Userlog> userLog = new QueryWrapper<Userlog>().eq("user", username).eq("signTime", LocalDate.now());
+//            判断是否签到
+            QueryWrapper<Usersign> userSign = new QueryWrapper<Usersign>().eq("user", username).eq("signTime", LocalDate.now());
+            Map<String, Object> map = usersignService.getMap(userSign);
+            if (map == null) {
+//                未签到
+                session.setAttribute("signIn", "0");
+            } else {
+//                签到了
+                session.setAttribute("signIn", "1");
+            }
+//            累计签到天数
+            int dayCount = usersignService.count(new QueryWrapper<Usersign>().eq("user", username));
+//            传入前端累计登陆天数
+            session.setAttribute("day", dayCount);
+//            传入前端用户名
             session.setAttribute("username", username);
+//            传入前端头像位置
             session.setAttribute("avatar", user.getAvatar());
-            session.setAttribute("signIn", user.getSingIn());
+//            传入VIP等级
             session.setAttribute("vipLevel", "VIP" + user.getVipLevel());
             return "redirect:/index";
         }
@@ -89,8 +125,8 @@ public class UserActionController {
         LocalDateTime now = LocalDateTime.now();
         user.setCreated(Timestamp.valueOf(now));
         user.setModified(Timestamp.valueOf(now));
-        int insert = userMapper.insert(user);
-        if (insert > 0) {
+        boolean save = userService.save(user);
+        if (save) {
             return "user/login";
         } else {
             model.addAttribute("error", "注册失败");

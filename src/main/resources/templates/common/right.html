@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
+    <script src="js/sign.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="layui-col-md4" th:fragment="right">
@@ -13,7 +14,7 @@
         <h3 class="fly-panel-title">温馨通道</h3>
         <ul class="fly-panel-main fly-list-static">
             <li>
-                <a href="http://fly.layui.com/jie/4281/" target="_blank">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
+                <a href="https://www.layui.com/" target="_blank">学习layui</a>
             </li>
             <li>
                 <a href="http://fly.layui.com/jie/5366/" target="_blank">
@@ -21,15 +22,15 @@
                 </a>
             </li>
             <li>
-                <a href="http://fly.layui.com/jie/4281/" target="_blank">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
+                <a href="https://spring.io/" target="_blank">学习Spring、SpringBoot</a>
             </li>
             <li>
-                <a href="http://fly.layui.com/jie/5366/" target="_blank">
-                    layui 常见问题的处理和实用干货集锦
+                <a href="http://www.mybatis.cn/" target="_blank">
+                    学习Mybatis
                 </a>
             </li>
             <li>
-                <a href="http://fly.layui.com/jie/4281/" target="_blank">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
+                <a href="https://mp.baomidou.com/" target="_blank">学习MybatisPlus</a>
             </li>
         </ul>
     </div>
@@ -42,18 +43,22 @@
             <a href="javascript:;" class="fly-link" id="LAY_signinHelp">说明</a>
             <i class="fly-mid"></i>
             <a href="javascript:;" class="fly-link" id="LAY_signinTop">活跃榜<span class="layui-badge-dot"></span></a>
-            <span class="fly-signin-days">已连续签到<cite>16</cite>天</span>
+            <span th:if="${session.username} ne '' and ${session.signIn} eq '1'">
+                <span class="fly-signin-days">已累计签到
+                    <cite th:text="${session.day}">0</cite>天
+                </span>
+            </span>
         </div>
         <!--  未签到      -->
-        <div class="fly-panel-main fly-signin-main">
-            <button class="layui-btn layui-btn-danger" id="LAY_signin">今日签到</button>
-            <span>可获得<cite>5</cite>飞吻</span>
+        <div class="fly-panel-main fly-signin-main" th:if="${session.signIn} eq '0' or ${session.username} ne '' ">
+            <button class="layui-btn sign"  onclick="sign()">今日签到</button>
+            <span>可获得<cite>5</cite>RMB</span>
         </div>
-<!--         已签到状态-->
-<!--        <div class="fly-panel-main fly-signin-main" th:if="${session.singIn == '0'|| session.singIn.equals('0')}">-->
-<!--            <button class="layui-btn layui-btn-disabled">今日已签到</button>-->
-<!--            <span>获得了<cite>20</cite>飞吻</span>-->
-<!--        </div>-->
+        <!--         已签到状态-->
+        <div class="fly-panel-main fly-signin-main" th:if="${session.signIn} eq '1' ">
+            <button class="layui-btn layui-btn-disabled">今日已签到</button>
+            <span>获得了<cite>5</cite>RMB</span>
+        </div>
     </div>
 
     <div class="fly-panel fly-rank fly-rank-reply" id="LAY_replyRank">
