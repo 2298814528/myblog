@@ -96,7 +96,7 @@ public class User implements Serializable {
     /**
      * 最后的登陆时间
      */
-    private LocalDateTime lasted;
+    private Timestamp lasted;
     /**
      * 状态
      */

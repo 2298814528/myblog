@@ -1,6 +1,7 @@
+$("#SignBtn").click
 var username = sessionStorage.getItem("user");
-$(".sign").click(function () {});
-function sign() {
+function signIn() {
+    alert(123)
     if (username == null || username == "") {
         alert("请先登录！")
     } else {

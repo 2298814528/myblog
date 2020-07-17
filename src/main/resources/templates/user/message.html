@@ -2,14 +2,17 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>我的消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="我的消息">
+    <meta name="description" content="我的消息界面">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
 </head>
 <body>
 <div th:replace="common/header::topbar1"></div>
 <div class="layui-container fly-marginTop fly-user-main">
-    <div th:replace="common/user-left::left"></div>
+    <div th:replace="common/user-left::left(uri='message')"></div>
 
     <div class="site-tree-mobile layui-hide">
         <i class="layui-icon">&#xe602;</i>

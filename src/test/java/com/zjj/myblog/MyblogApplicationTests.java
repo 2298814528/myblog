@@ -9,15 +9,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
 @SpringBootTest
 class MyblogApplicationTests {
-    @Autowired
-    UserMapper userMapper;
+
 
     @Test
     void contextLoads() {
@@ -25,8 +26,8 @@ class MyblogApplicationTests {
 
     @Test
     void find(){
-        List<User> users = userMapper.selectList(null);
-        users.forEach(user -> System.out.println("user = "+user));
+//        List<User> users = userMapper.selectList(null);
+//        users.forEach(user -> System.out.println("user = "+user));
     }
     @Test
     void findOne(){
@@ -44,6 +45,18 @@ class MyblogApplicationTests {
 //        System.out.println(integer.equals(new Integer(0)));
 //        System.out.println(integer == 0);
 //        System.out.println(integer == new Integer(0));
+
+//        String s = new SimpleDateFormat("yyyy-MM-dd").format(new Date()).toString();
+//        System.out.println(s);
+//        Date date = new Date();
+//        System.out.println(date.toString());
+//        System.out.println(date);
+        String s = new SimpleDateFormat("yyyy-MM-dd").format(new Date()).toString();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate time = LocalDate.parse(s, dateTimeFormatter);
+        System.out.println(time);
+        System.out.println("______________________________");
+        System.out.println(LocalDate.now());
     }
 
 }

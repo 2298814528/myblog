@@ -26,9 +26,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -73,7 +75,14 @@ public class UserActionController {
             userlog.setLogTime(Timestamp.valueOf(LocalDateTime.now()));
             userlog.setUser(username);
             userlogService.save(userlog);
-            QueryWrapper<Userlog> userLog = new QueryWrapper<Userlog>().eq("user", username).eq("signTime", LocalDate.now());
+//            修改用户表最后一次登录、状态
+            LocalDateTime now = LocalDateTime.now();
+            Timestamp lasted = Timestamp.valueOf(now);
+            User userUpdate = new User();
+            userUpdate.setLasted(lasted);
+            userUpdate.setStatus(1);
+            QueryWrapper<User> userLast = new QueryWrapper<User>().eq("username", username);
+            userService.update(userUpdate,userLast);
 //            判断是否签到
             QueryWrapper<Usersign> userSign = new QueryWrapper<Usersign>().eq("user", username).eq("signTime", LocalDate.now());
             Map<String, Object> map = usersignService.getMap(userSign);
@@ -94,6 +103,18 @@ public class UserActionController {
             session.setAttribute("avatar", user.getAvatar());
 //            传入VIP等级
             session.setAttribute("vipLevel", "VIP" + user.getVipLevel());
+//            传入前端性别
+            session.setAttribute("gender",user.getGender());
+//            传入前端签名
+            session.setAttribute("sign",user.getSign());
+//            传入前端email
+            session.setAttribute("email",user.getEmail());
+//            密码
+            session.setAttribute("password",user.getPassword());
+//            微信
+            session.setAttribute("wechat",user.getWechat());
+//            生日
+            session.setAttribute("birthday",user.getBirthday());
             return "redirect:/index";
         }
     }
@@ -132,5 +153,16 @@ public class UserActionController {
             model.addAttribute("error", "注册失败");
             return "user/reg";
         }
+    }
+
+    @RequestMapping("/logout")
+    public String logOut(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.removeAttribute("username");
+        session.removeAttribute("day");
+        session.removeAttribute("signIn");
+        session.removeAttribute("avatar");
+        session.removeAttribute("vipLevel");
+        return "index";
     }
 }

@@ -1,13 +1,18 @@
 package com.zjj.myblog.controller;
 
 
+import com.alibaba.fastjson.JSONArray;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.zjj.myblog.entity.User;
 import com.zjj.myblog.entity.Usersign;
 import com.zjj.myblog.mapper.UsersignMapper;
+import com.zjj.myblog.service.UserService;
 import com.zjj.myblog.service.UsersignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,17 +32,36 @@ import java.util.Date;
 @RestController
 public class UsersignController {
     @Autowired
+    UserService userService;
+    @Autowired
     UsersignService usersignService;
+
     @RequestMapping("/signIn")
-    public String sign(@RequestParam("user")String user){
+    @ResponseBody
+    public String sign(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("username");
         LocalDate now = LocalDate.now();
         Usersign usersign = new Usersign();
         usersign.setSignTime(now);
-        usersign.setUser(user);
+        usersign.setUser(username);
         boolean save = usersignService.save(usersign);
-        if (save){
-            return "签到成功";
-        }else {
+        if (save) {
+            QueryWrapper<User> userWrapper = new QueryWrapper<User>().eq("username", username);
+            User user = userService.getOne(userWrapper);
+            int point = user.getPoint();
+            point = point + 5;
+            user.setPoint(point);
+            boolean update = userService.update(user, userWrapper);
+            if (update) {
+                session.setAttribute("signIn", "1");
+                return "签到成功";
+            } else {
+                session.setAttribute("signIn", "1");
+                return "签到失败";
+            }
+        } else {
+            session.setAttribute("signIn", "1");
             return "签到失败";
         }
     }

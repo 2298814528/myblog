@@ -10,7 +10,7 @@
 <div class="fly-header layui-bg-black" th:fragment="topbar1">
     <div class="layui-container">
         <a class="fly-logo" href="javascript:void(0)">
-            <img src="res/images/logo.png" alt="layui">
+            <img src="res/images/logo.png" alt="zjj">
         </a>
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item layui-this">
@@ -21,7 +21,7 @@
             <!--            </li>-->
 
             <li class="layui-nav-item">
-                <a th:href="@{/technology}" target="_blank"><i class="iconfont icon-ui"></i>所用技术</a>
+                <a th:href="@{/technology}" target="_blank"><i class="iconfont icon-ui"></i>页面介绍</a>
             </li>
         </ul>
         <!-- 未登入的状态 -->
@@ -48,14 +48,14 @@
         <ul class="layui-nav fly-nav-user" th:if="${not #strings.isEmpty(session.username)}">
             <li class="layui-nav-item">
                 <a class="fly-nav-avatar" href="javascript:;">
-                    <cite class="layui-hide-xs" th:text="${session.username}">xxx</cite>
+                    <cite class="layui-hide-xs" id="username" th:text="${session.username}">xxx</cite>
                     <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：zjj"></i>
                     <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="${session.vipLevel}">VIP0</i>
                     <img style="height: 30px;width: 30px" th:src="'upload/'+${session.avatar}">
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a th:href="@{/set}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                    <dd><a th:href="@{/message}"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                    <dd><a th:href="@{/set(msg='set')}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                    <dd><a th:href="@{/message(msg='message')}"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
                     <dd><a th:href="@{/home}"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a>
                     </dd>
                     <hr style="margin: 5px 0;">
