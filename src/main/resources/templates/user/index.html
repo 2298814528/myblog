@@ -1,77 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>用户中心</title>
+    <meta charset="utf-8">
+    <title>我的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="测试博客">
+    <meta name="description" content="主页">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 </head>
 <body>
+
 <div th:replace="common/header::topbar1"></div>
-<div class="layui-container fly-marginTop fly-user-main">
 
-    <div th:replace="common/user-left::left"></div>
-
-    <div class="site-tree-mobile layui-hide">
-        <i class="layui-icon">&#xe602;</i>
-    </div>
-    <div class="site-mobile-shade"></div>
-
-    <div class="site-tree-mobile layui-hide">
-        <i class="layui-icon">&#xe602;</i>
-    </div>
-    <div class="site-mobile-shade"></div>
-
-
-    <div class="fly-panel fly-panel-user" pad20>
-
-        <div class="layui-tab layui-tab-brief" lay-filter="user">
-            <ul class="layui-tab-title" id="LAY_mine">
-                <li data-type="mine-jie" lay-id="index" class="layui-this">我发的帖（<span>89</span>）</li>
-                <li data-type="collection" data-url="/collection/find/" lay-id="collection">我收藏的帖（<span>16</span>）</li>
-            </ul>
-            <div class="layui-tab-content" style="padding: 20px 0;">
-                <div class="layui-tab-item layui-show">
-                    <ul class="mine-view jie-row">
-                        <li>
-                            <a class="jie-title" href="../jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
-                            <i>2017/3/14 上午8:30:00</i>
-                            <a class="mine-edit" href="/jie/edit/8116">编辑</a>
-                            <em>661阅/10答</em>
-                        </li>
-                        <li>
-                            <a class="jie-title" href="../jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
-                            <i>2017/3/14 上午8:30:00</i>
-                            <a class="mine-edit" href="/jie/edit/8116">编辑</a>
-                            <em>661阅/10答</em>
-                        </li>
-                        <li>
-                            <a class="jie-title" href="../jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
-                            <i>2017/3/14 上午8:30:00</i>
-                            <a class="mine-edit" href="/jie/edit/8116">编辑</a>
-                            <em>661阅/10答</em>
-                        </li>
-                    </ul>
-                    <div id="LAY_page"></div>
-                </div>
-                <div class="layui-tab-item">
-                    <ul class="mine-view jie-row">
-                        <li>
-                            <a class="jie-title" href="../jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
-                            <i>收藏于23小时前</i>  </li>
-                    </ul>
-                    <div id="LAY_page1"></div>
-                </div>
-            </div>
-        </div>
+<div th:replace="common/header::topbar2"></div>
+<div class="layui-container">
+    <div class="layui-row layui-col-space15">
+        <div th:replace="common/left::left"></div>
+        <div th:replace="common/right::right"></div>
     </div>
 </div>
 <div th:replace="common/footer::footer"></div>
 <script src="res/layui/layui.js" type="application/javascript" charset="utf-8"></script>
 <script src="js/footer.js" charset="utf-8"></script>
-<script src="js/common.js"></script>
 <script type="text/javascript" language="JavaScript">
     var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
     document.write(
@@ -81,6 +33,37 @@
             + "type='text/javascript'%3E%3C/script%3E")
     );
 </script>
-<script src="js/sign.js" type="text/javascript"></script>
+<script type="application/javascript" src="js/common.js"></script>
+<script type="text/javascript" th:src="@{/jq/jquery-3.4.1.min.js}"></script>
+<script th:inline="javascript" type="text/javascript">
+    $(function () {
+        $(document).on('click', "button[id='SignBtn']", function () {
+            const user = /*[[${session.username}]]*/ {};
+            if (user == null || user == "") {
+                alert("请先登录")
+            } else {
+                $.ajax({
+                    url: 'signIn',
+                    method: 'POST',
+                    dataType: 'JSON',
+                    contentType: 'application/json',
+                    data: {
+                        user: user
+                    } ,
+                    success: function () {
+                        $("button[id='SignBtn']").attr("disabled",true)
+                        $("button[id='SignBtn']").addClass("layui-btn-disabled");
+                        alert("签到成功");
+                    },
+                    error: function () {
+                        $("button[id='SignBtn']").attr("disabled",true);
+                        $("button[id='SignBtn']").addClass("layui-btn-disabled");
+                        alert("签到成功");
+                    }
+                });
+            }
+        })
+    })
+</script>
 </body>
 </html>
