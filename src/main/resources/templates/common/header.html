@@ -10,15 +10,16 @@
 <div class="fly-header layui-bg-black" th:fragment="topbar1">
     <div class="layui-container">
         <a class="fly-logo" href="javascript:void(0)">
-            <img src="res/images/logo.png" alt="zjj">
+            <img th:src="${uri} == 'userIndex'?'http://localhost:8080/res/images/logo.png':'res/images/logo.png'"
+                 alt="zjj">
         </a>
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item layui-this">
                 <a href="https://github.com/2298814528/myblog"><i class="iconfont icon-jiaoliu"></i>源码</a>
             </li>
-            <!--            <li class="layui-nav-item">-->
-            <!--                <a href="case/case.html"><i class="iconfont icon-iconmingxinganli"></i>案例</a>-->
-            <!--            </li>-->
+            <li class="layui-nav-item">
+                <a href="/"><i class="iconfont icon-iconmingxinganli"></i>所用技术</a>
+            </li>
 
             <li class="layui-nav-item">
                 <a th:href="@{/technology}" target="_blank"><i class="iconfont icon-ui"></i>页面介绍</a>
@@ -51,12 +52,15 @@
                     <cite class="layui-hide-xs" id="username" th:text="${session.username}">xxx</cite>
                     <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：zjj"></i>
                     <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="${session.vipLevel}">VIP0</i>
-                    <img style="height: 30px;width: 30px" th:src="'upload/'+${session.avatar}">
+                    <img style="height: 30px;width: 30px"
+                         th:src="${uri} == 'userIndex'?'http://localhost:8080/upload/'+${session.avatar}:'upload/'+${session.avatar}">
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a th:href="@{/set(msg='set')}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                    <dd><a th:href="@{/message(msg='message')}"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                    <dd><a th:href="@{/home}"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a>
+                    <dd><a th:href="@{/message(msg='message')}"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a>
+                    </dd>
+                    <dd><a th:href="@{/home}"><i class="layui-icon"
+                                                 style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a>
                     </dd>
                     <hr style="margin: 5px 0;">
                     <dd><a th:href="@{/logout}" style="text-align: center;">退出</a></dd>

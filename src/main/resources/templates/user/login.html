@@ -21,7 +21,7 @@
             <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
                 <div class="layui-tab-item layui-show">
                     <div class="layui-form layui-form-pane">
-                        <form method="post" th:action="@{/loginUser}" action="/loginUser">
+                        <form method="post" th:action="@{/loginUser}" action="/loginUser" id="from" onsubmit="return check()">
                             <div class="layui-form-item">
                                 <label for="L_email" class="layui-form-label">用户名</label>
                                 <div class="layui-input-inline">
@@ -40,24 +40,22 @@
                                 <label for="L_vercode" class="layui-form-label">验证码</label>
                                 <div class="layui-input-inline">
                                     <input type="text" id="L_vercode" name="vercode" required lay-verify="required"
-                                           placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
+                                           placeholder="请输入验证码" autocomplete="off" class="layui-input">
                                 </div>
-                                <div class="layui-form-mid">
-                                    <span style="color: #c00;">123</span>
-                                </div>
+                                <img th:src="@{/code}" id="CheckCode">
                             </div>
                             <div class="layui-form-item">
-                                <button type="submit" class="layui-btn">立即登录</button>
+                                <input type="submit" class="layui-btn" value="立即登录"></input>
 
                                 <span style="padding-left:20px;">
-                  <a href="forget.html">忘记密码？</a>
+                  <a th:href="@{/forget}">忘记密码？</a>
                 </span>
                             </div>
                             <div class="layui-form-item fly-form-app">
                                 <span>或者使用社交账号登入</span>
-                                <a href="" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+                                <a href="javascript:" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
                                    class="iconfont icon-qq" title="QQ登入"></a>
-                                <a href="" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
+                                <a href="javascript:" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
                                    class="iconfont icon-weibo" title="微博登入"></a>
                             </div>
                         </form>
@@ -68,6 +66,7 @@
     </div>
 </div>
 <div th:replace="common/footer::footer"></div>
+<a th:src="@{/codes}">123</a>
 <script src="res/layui/layui.js" type="application/javascript" charset="utf-8"></script>
 <script src="js/footer.js" charset="utf-8"></script>
 <script type="text/javascript" language="JavaScript">
@@ -78,6 +77,47 @@
             + "w.cnzz.com/c.php%3Fid%3D30088308' "
             + "type='text/javascript'%3E%3C/script%3E")
     );
+</script>
+<script type="text/javascript" th:src="@{/jq/jquery-3.4.1.min.js}"></script>
+<script th:inline="javascript" type="text/javascript">
+    $(function () {
+        const error = /*[[${session.error}]]*/ {};
+        if ($.trim(error)) {
+            alert(error)
+        }
+        //刷新验证码
+        $(document).on('click', "img[id='CheckCode']", function () {
+            var date = new Date();
+            this.src = this.src + "?" + date;
+        });
+    })
+</script>
+<script th:inline="javascript" type="text/javascript">
+    var code;
+    var checkCode
+    function check(){
+        checkCode = $("#L_vercode").val();
+        $.ajax({
+            url: 'codes',
+            method: 'POST',
+            dataType: 'json',
+            async: false,
+            success: function (data) {
+                code = data["code"];
+            },
+            error: function (data) {
+                alert("服务器错误");
+                return false;
+            }
+        });
+        if (checkCode.toLowerCase() == code){
+            return true;
+        }else {
+            alert("验证码错误，请重新输入！");
+            return false;
+        }
+        return false;
+    }
 </script>
 </body>
 </html>

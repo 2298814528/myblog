@@ -58,18 +58,18 @@ public class UserActionController {
      *
      * @param username
      * @param password
-     * @param model
      * @param session
      * @return
      */
     @RequestMapping("/loginUser")
-    public String login(String username, String password, Model model, HttpSession session) {
+    public String login(String username, String password, HttpSession session) {
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<User>().eq("username", username).eq("password", password);
         User user = userService.getOne(userQueryWrapper);
         if (user == null) {
-            model.addAttribute("error", "账号或密码错误");
+            session.setAttribute("error","账号、密码错误");
             return "user/login";
         } else {
+            session.removeAttribute("error");
 //            插入登录表
             Userlog userlog = new Userlog();
             userlog.setLogTime(Timestamp.valueOf(LocalDateTime.now()));
@@ -155,14 +155,4 @@ public class UserActionController {
         }
     }
 
-    @RequestMapping("/logout")
-    public String logOut(HttpServletRequest request){
-        HttpSession session = request.getSession();
-        session.removeAttribute("username");
-        session.removeAttribute("day");
-        session.removeAttribute("signIn");
-        session.removeAttribute("avatar");
-        session.removeAttribute("vipLevel");
-        return "index";
-    }
 }
