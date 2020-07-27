@@ -1,6 +1,10 @@
 package com.zjj.myblog.entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
+
+import cn.hutool.core.date.DateTime;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -71,6 +75,13 @@ public class Post implements Serializable {
      * 置顶等级
      */
     private Integer level;
+
+    /**
+     * 发布时间
+     */
+    @TableField("created")
+    private Timestamp created;
+
 
 
 }

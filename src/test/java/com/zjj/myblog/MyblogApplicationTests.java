@@ -1,12 +1,20 @@
 package com.zjj.myblog;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zjj.myblog.entity.User;
+import com.zjj.myblog.entity.Userlog;
 import com.zjj.myblog.mapper.UserMapper;
+import com.zjj.myblog.mapper.UserlogMapper;
+import com.zjj.myblog.service.UserlogService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 
+import java.awt.*;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -14,23 +22,27 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @SpringBootTest
 class MyblogApplicationTests {
-
+    @Autowired
+    UserlogService userlogService;
 
     @Test
     void contextLoads() {
     }
 
     @Test
-    void find(){
+    void find() {
 //        List<User> users = userMapper.selectList(null);
 //        users.forEach(user -> System.out.println("user = "+user));
     }
+
     @Test
-    void findOne(){
+    void findOne() {
 //        LocalDateTime now = LocalDateTime.now();
 //        Timestamp timestamp = Timestamp.valueOf(now);
 //        System.out.println(timestamp);
@@ -57,6 +69,12 @@ class MyblogApplicationTests {
         System.out.println(time);
         System.out.println("______________________________");
         System.out.println(LocalDate.now());
+    }
+
+    @Test
+    public void page() {
+        IPage<Userlog> icheckPage = new Page<>(2, 2);
+        IPage<Userlog> page = userlogService.page(icheckPage, null);
     }
 
 }

@@ -2,11 +2,17 @@ package com.zjj.myblog.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.zjj.myblog.entity.Post;
 import com.zjj.myblog.entity.User;
+import com.zjj.myblog.service.PostService;
 import com.zjj.myblog.service.UserService;
 import com.zjj.myblog.utils.CheckCode;
+import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,8 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,20 +39,11 @@ public class UserController {
     UserService userService;
     @Autowired
     CheckCode checkCode;
-
-
-    /**
-     * 登录
-     *
-     * @return
-     */
-    @RequestMapping("/login")
-    public String loginHtml() {
-        return "user/login";
-    }
+    @Autowired
+    PostService postService;
 
     /**
-     * 注册
+     * 注册跳转
      *
      * @return
      */
@@ -71,17 +68,45 @@ public class UserController {
      * @return
      */
     @RequestMapping("/index")
-    public String index(HttpSession session) {
+    public String index(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+//        置顶的帖子
+        IPage ipageLevel = new Page(1,5);
+        QueryWrapper<Post> levelQW = new QueryWrapper<Post>().eq("level",1);
+        IPage pageLevel = postService.page(ipageLevel, levelQW);
+        List recordsLevel = pageLevel.getRecords();
+        session.setAttribute("level",recordsLevel);
+//        所有的帖子
+        IPage ipageAll = new Page(1,10);
+        IPage pageAll = postService.page(ipageAll, null);
+        List recordsAll = pageAll.getRecords();
+        session.setAttribute("records",recordsAll);
+        session.setAttribute("total",pageAll.getTotal());
         return "index";
     }
 
     /**
-     * 发布新的博客
+     * 主页
+     *
      * @return
      */
-    @RequestMapping("/add")
-    public String add() {
-        return "option/add";
+    @RequestMapping("/")
+    public String indexs(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+//        置顶的帖子
+        IPage ipageLevel = new Page(1,5);
+        QueryWrapper<Post> levelQW = new QueryWrapper<Post>().eq("level",1);
+        IPage pageLevel = postService.page(ipageLevel, levelQW);
+        List recordsLevel = pageLevel.getRecords();
+        session.setAttribute("level",recordsLevel);
+//        所有的帖子
+        IPage ipageAll = new Page(1,10);
+        IPage pageAll = postService.page(ipageAll, null);
+        List recordsAll = pageAll.getRecords();
+        session.setAttribute("all",recordsAll);
+        session.setAttribute("total",pageAll.getTotal());
+        return "index";
+
     }
 
     /**
@@ -136,20 +161,6 @@ public class UserController {
     }
 
     /**
-     * 登出
-     * @param request
-     * @return
-     */
-    @RequestMapping("/logout")
-    public String logOut(HttpServletRequest request) {
-        Enumeration<String> attributeNames = request.getSession().getAttributeNames();
-        while (attributeNames.hasMoreElements()) {
-            request.getSession().removeAttribute(attributeNames.nextElement().toString());
-        }
-        return "index";
-    }
-
-    /**
      * 生成验证码
      * @param request
      * @param response
@@ -174,6 +185,11 @@ public class UserController {
         String code = checkCode.getCode();
         map.put("code",code);
         return map;
+    }
+
+    @RequestMapping("/detail/{id:\\d*}")
+    public String detail(@PathVariable(name = "id")Long id){
+        return "option/detail";
     }
 
     @RequestMapping("/test")

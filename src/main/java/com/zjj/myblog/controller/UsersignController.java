@@ -20,6 +20,8 @@ import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -38,7 +40,8 @@ public class UsersignController {
 
     @RequestMapping("/signIn")
     @ResponseBody
-    public String sign(HttpServletRequest request) {
+    public Map<String,String> sign(HttpServletRequest request) {
+        Map map = new HashMap();
         HttpSession session = request.getSession();
         String username = (String) session.getAttribute("username");
         LocalDate now = LocalDate.now();
@@ -55,14 +58,17 @@ public class UsersignController {
             boolean update = userService.update(user, userWrapper);
             if (update) {
                 session.setAttribute("signIn", "1");
-                return "签到成功";
+                map.put("msg","签到成功");
+                return map;
             } else {
                 session.setAttribute("signIn", "1");
-                return "签到失败";
+                map.put("msg","签到失败");
+                return map;
             }
         } else {
             session.setAttribute("signIn", "1");
-            return "签到失败";
+            map.put("msg","签到失败");
+            return map;
         }
     }
 }

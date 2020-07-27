@@ -3,17 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ef61ffad-e0fd-4b55-a09f-28901817f1e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserActionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserActionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/user-left.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/user-left.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/option/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/option/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UsersignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UsersignController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/option/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/option/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +65,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="E:/桌面/黄亮/traffic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/zjj/myblog" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.zjj.myblog.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\myblog\src\main\java\com\zjj\myblog" />
+      <recent name="D:\IDEA\myblog\src\main\resources\static\jq" />
+      <recent name="D:\IDEA\myblog\src\main\resources\static\layui" />
+      <recent name="D:\IDEA\myblog\src\main\resources\static\layui\dist" />
+      <recent name="D:\IDEA\myblog\src\main\resources\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IDEA\myblog\src\main\resources\static\js" />
@@ -76,13 +85,6 @@
       <recent name="D:\IDEA\myblog\src\main\resources" />
       <recent name="D:\IDEA\myblog\src\main\resources\static" />
       <recent name="D:\IDEA\myblog\src\main\resources\resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEA\myblog\src\main\resources\static\jq" />
-      <recent name="D:\IDEA\myblog\src\main\resources\static\layui" />
-      <recent name="D:\IDEA\myblog\src\main\resources\static\layui\dist" />
-      <recent name="D:\IDEA\myblog\src\main\resources\static" />
-      <recent name="D:\IDEA\myblog\src\main\java\com\zjj\myblog\Interceptor" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -149,17 +151,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyblogApplicationTests.page" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myblog" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zjj.myblog.service.impl.*" />
+          <option name="PATTERN" value="com.zjj.myblog.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zjj.myblog.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.zjj.myblog.service.impl.UserServiceImpl" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="com.zjj.myblog" />
+      <option name="MAIN_CLASS_NAME" value="com.zjj.myblog.MyblogApplicationTests" />
+      <option name="METHOD_NAME" value="page" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyblogApplicationTests.page" />
         <item itemvalue="Application.CheckCode" />
         <item itemvalue="JUnit.MyblogApplicationTests.findOne" />
         <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="JUnit.MyblogApplicationTests.find" />
-        <item itemvalue="JUnit.UserServiceImpl.test" />
       </list>
     </recent_temporary>
   </component>
@@ -214,6 +216,8 @@
       <workItem from="1594741655361" duration="27333000" />
       <workItem from="1594972209308" duration="53195000" />
       <workItem from="1595598470618" duration="13117000" />
+      <workItem from="1595691678182" duration="1150000" />
+      <workItem from="1595729140367" duration="35334000" />
     </task>
     <task id="LOCAL-00001" summary="by zjj">
       <created>1594294986639</created>
@@ -425,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594994472931</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="增加前端页面  by zjj 2020/7/17 0:58">
+      <created>1595691730898</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1595691730898</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,10 +461,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="182" y="35" key="#HTTP_Proxy/0.0.1366.728@0.0.1366.728" timestamp="1594295682700" />
-    <state x="862" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1594530619509">
+    <state x="862" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1595825241953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="862" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594530619509" />
+    <state x="862" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595825241953" />
     <state x="490" y="292" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1594302193472">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -462,10 +473,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594993523633" />
-    <state x="161" y="0" key="CommitChangelistDialog2" timestamp="1594994471792">
+    <state x="161" y="0" key="CommitChangelistDialog2" timestamp="1595691728185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="161" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1594994471792" />
+    <state x="161" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595691728185" />
     <state x="708" y="130" key="FileChooserDialogImpl" timestamp="1594740524392">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -474,54 +485,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="490" y="269" width="373" height="203" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1594574860312" />
-    <state width="1323" height="231" key="GridCell.Tab.0.bottom" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.0.bottom" timestamp="1595857607461">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.0.center" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595857607461" />
+    <state width="1323" height="263" key="GridCell.Tab.0.center" timestamp="1595857607460">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.0.left" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595857607460" />
+    <state width="1323" height="263" key="GridCell.Tab.0.left" timestamp="1595857607460">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.0.right" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595857607460" />
+    <state width="1323" height="263" key="GridCell.Tab.0.right" timestamp="1595857607460">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.1.bottom" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595857607460" />
+    <state width="1323" height="263" key="GridCell.Tab.1.bottom" timestamp="1595857607462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.1.center" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595857607462" />
+    <state width="1323" height="263" key="GridCell.Tab.1.center" timestamp="1595857607462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.1.left" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595857607462" />
+    <state width="1323" height="263" key="GridCell.Tab.1.left" timestamp="1595857607461">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.1.right" timestamp="1595691616056">
+    <state width="1323" height="263" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595857607461" />
+    <state width="1323" height="263" key="GridCell.Tab.1.right" timestamp="1595857607462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.2.bottom" timestamp="1595691616057">
+    <state width="1323" height="263" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595857607462" />
+    <state width="1323" height="324" key="GridCell.Tab.2.bottom" timestamp="1595856763951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595691616057" />
-    <state width="1323" height="231" key="GridCell.Tab.2.center" timestamp="1595691616056">
+    <state width="1323" height="324" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595856763951" />
+    <state width="1323" height="324" key="GridCell.Tab.2.center" timestamp="1595856763951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.2.left" timestamp="1595691616056">
+    <state width="1323" height="324" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1595856763951" />
+    <state width="1323" height="324" key="GridCell.Tab.2.left" timestamp="1595856763951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1595691616056" />
-    <state width="1323" height="231" key="GridCell.Tab.2.right" timestamp="1595691616057">
+    <state width="1323" height="324" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1595856763951" />
+    <state width="1323" height="324" key="GridCell.Tab.2.right" timestamp="1595856763951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1595691616057" />
+    <state width="1323" height="324" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1595856763951" />
     <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1594298458517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -530,14 +541,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="93" y="19" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595085925106" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1594994475475">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1595691733194">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594994475475" />
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594743602314">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595691733194" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595691755333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1594743602314" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1595691755333" />
     <state x="454" y="95" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595086225599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -554,10 +565,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594918729164" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595606121903">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595692009508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595606121903" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595692009508" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,6 +582,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/Intercepter/LoginHandlerIntercepter.java</url>
           <line>24</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

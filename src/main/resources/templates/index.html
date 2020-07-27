@@ -8,7 +8,6 @@
     <meta name="description" content="主页">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
-
 </head>
 <body>
 
@@ -36,7 +35,23 @@
 <script type="application/javascript" src="js/common.js"></script>
 <script type="text/javascript" th:src="@{/jq/jquery-3.4.1.min.js}"></script>
 <script th:inline="javascript" type="text/javascript">
+    $.ajax({
+        url: "blog",
+        method: "POST",
+        dataType: 'JSON',
+        async: false,
+        data: {'current': 1, 'size': 5},
+        success: function () {
+            console.log("success");
+        },
+        error: function () {
+            console.log("error");
+        }
+    })
+</script>
+<script th:inline="javascript" type="text/javascript">
     $(function () {
+        var msg;
         $(document).on('click', "button[id='SignBtn']", function () {
             const user = /*[[${session.username}]]*/ {};
             if (user == null || user == "") {
@@ -49,21 +64,30 @@
                     contentType: 'application/json',
                     data: {
                         user: user
-                    } ,
-                    success: function () {
-                        $("button[id='SignBtn']").attr("disabled",true)
-                        $("button[id='SignBtn']").addClass("layui-btn-disabled");
-                        alert("签到成功");
                     },
-                    error: function () {
-                        $("button[id='SignBtn']").attr("disabled",true);
+                    success: function (data) {
+                        $("button[id='SignBtn']").attr("disabled", true)
                         $("button[id='SignBtn']").addClass("layui-btn-disabled");
-                        alert("签到成功");
+                        msg = data["msg"];
+                        alert(msg);
+                    },
+                    error: function (data) {
+                        // $("button[id='SignBtn']").attr("disabled",true);
+                        // $("button[id='SignBtn']").addClass("layui-btn-disabled");
+                        alert("签到失败");
                     }
                 });
             }
         })
     })
+</script>
+<script th:inline="javascript" type="text/javascript">
+    $(document).on('click', "a[name='page']", function () {
+        $("a[class='laypage-curr']").removeClass();
+        $("a[class !='laypage-next'][name='page']").addClass("laypage-next");
+        $(this).removeClass();
+        $(this).addClass("laypage-curr");
+    });
 </script>
 </body>
 </html>
