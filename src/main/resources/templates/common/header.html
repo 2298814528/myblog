@@ -9,10 +9,10 @@
 <body>
 <div class="fly-header layui-bg-black" th:fragment="topbar1">
     <div class="layui-container">
-        <a class="fly-logo" href="javascript:void(0)">
+
             <img th:src="${uri} == 'userIndex'?'http://localhost:8080/res/images/logo.png':'res/images/logo.png'"
-                 alt="zjj">
-        </a>
+                 alt="zjj" class="fly-logo">
+
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item layui-this">
                 <a href="https://github.com/2298814528/myblog"><i class="iconfont icon-jiaoliu"></i>源码</a>
@@ -53,7 +53,7 @@
                     <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：zjj"></i>
                     <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="${session.vipLevel}">VIP0</i>
                     <img style="height: 30px;width: 30px"
-                         th:src="${uri} == 'userIndex'?'http://localhost:8080/upload/'+${session.avatar}:'upload/'+${session.avatar}">
+                         th:src="'http://localhost:8080/upload/'+${session.avatar}:'upload/'+${session.avatar}">
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a th:href="@{/set(msg='set')}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>

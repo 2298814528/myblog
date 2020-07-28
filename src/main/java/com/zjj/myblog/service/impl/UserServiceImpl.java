@@ -6,6 +6,9 @@ import com.zjj.myblog.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -16,5 +19,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+    @Resource
+    UserMapper userMapper;
 
+    @Override
+    public List<User> blogComment() {
+        List<User> blogComment = userMapper.getBlogComment();
+        return blogComment;
+    }
 }

@@ -47,9 +47,9 @@ public class Post implements Serializable {
     private Long userId;
 
     /**
-     * 支持人数
+     * 积分
      */
-    private Integer voteUp;
+    private Integer integral;
 
     /**
      * 反对人数

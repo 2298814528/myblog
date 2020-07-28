@@ -4,16 +4,22 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.zjj.myblog.entity.Blog_User;
+import com.zjj.myblog.entity.HotBlog;
 import com.zjj.myblog.entity.User;
 import com.zjj.myblog.entity.Userlog;
+import com.zjj.myblog.mapper.PostMapper;
 import com.zjj.myblog.mapper.UserMapper;
 import com.zjj.myblog.mapper.UserlogMapper;
+import com.zjj.myblog.service.PostService;
+import com.zjj.myblog.service.UserService;
 import com.zjj.myblog.service.UserlogService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 
+import javax.annotation.Resource;
 import java.awt.*;
 import java.sql.Timestamp;
 import java.text.DateFormat;
@@ -21,15 +27,20 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
 @SpringBootTest
 class MyblogApplicationTests {
     @Autowired
+    UserService userService;
+    @Autowired
     UserlogService userlogService;
+
+    @Autowired
+    PostService postService;
+    @Resource
+    PostMapper postMapper;
 
     @Test
     void contextLoads() {
@@ -73,8 +84,18 @@ class MyblogApplicationTests {
 
     @Test
     public void page() {
-        IPage<Userlog> icheckPage = new Page<>(2, 2);
-        IPage<Userlog> page = userlogService.page(icheckPage, null);
+//        IPage<Userlog> icheckPage = new Page<>(2, 2);
+//        IPage<Userlog> page = userlogService.page(icheckPage, null);
+//        List<Blog_User> blog_users = postService.listByPageLevel(0, 10);
+//        List<HotBlog> hot = postMapper.getHot();/res/images/avatar/default.png
+        List<HotBlog> hot = postService.hot();
+        hot.get(0);
+    }
+    
+    @Test
+    public void BlogComment(){
+        List<User> users = userService.blogComment();
+        User user = users.get(0);
     }
 
 }

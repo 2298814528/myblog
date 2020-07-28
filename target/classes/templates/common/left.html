@@ -11,136 +11,47 @@
     <div class="fly-panel">
         <div class="fly-panel-title fly-filter">
             <a>置顶</a>
-            <a href="#signin" class="layui-hide-sm layui-show-xs-block fly-right" id="LAY_goSignin" style="color: #FF5722;">去签到</a>
+            <a href="#signin" class="layui-hide-sm layui-show-xs-block fly-right" id="LAY_goSignin"
+               style="color: #FF5722;">去签到</a>
         </div>
-        <ul class="fly-list">
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
+        <ul class="fly-list" id="first">
+            <li th:each="level:${session.level}">
+                <a th:href="@{/home/${level.username}}" class="fly-avatar">
+                    <img th:src="'http://localhost:8080/upload/'+${level.avatar}" th:alt="${level.username}">
                 </a>
                 <h2>
                     <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
+                    <a th:href="@{/detail/${level.id}}" th:text="${level.title}"></a>
                 </h2>
                 <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                    </a>
-                    <span>刚刚</span>
+                    <span>
+                        <cite th:text="${level.username}"></cite>
+                        <i class="iconfont icon-renzheng" title="认证信息：zjj"></i>
+                        <i class="layui-badge fly-badge-vip" th:text="VIP+${level.vipLevel}"></i>
+                    </span>
+                    <span th:text="${level.created}"></span>
 
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>
+                    <span class="fly-list-kiss layui-hide-xs" title="悬赏">
+                        <i class="layui-icon layui-icon-rmb" title="账户">&#xe65e;</i>
+                        <span th:text="${level.integral}"></span>
+                    </span>
+                    <span class="layui-badge fly-badge-accept layui-hide-xs" th:if="${level.status} eq 1">已结</span>
+                    <span class="layui-badge fly-badge-accept layui-hide-xs" th:if="${level.status} eq 0">未结</span>
                     <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
+                        <a th:href="@{/detail/${level.id}}">
+                            <i class="iconfont icon-pinglun1" title="回答"></i>
+                            <span th:text="${level.commentCount}"></span>
+                        </a>
               </span>
                 </div>
                 <div class="fly-list-badge">
-                    <!--
                     <span class="layui-badge layui-bg-black">置顶</span>
-                    <span class="layui-badge layui-bg-red">精帖</span>
-                    -->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">公告</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>2017-11-30</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--
-                    <span class="layui-badge layui-bg-black">置顶</span>
-                    <span class="layui-badge layui-bg-red">精帖</span>
-                    -->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">公告</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--
-                    <span class="layui-badge layui-bg-black">置顶</span>
-                    <span class="layui-badge layui-bg-red">精帖</span>
-                    -->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">公告</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--
-                    <span class="layui-badge layui-bg-black">置顶</span>
-                    <span class="layui-badge layui-bg-red">精帖</span>
-                    -->
+                    <span th:if="${level.recommend}" class="layui-badge layui-bg-red">精帖</span>
                 </div>
             </li>
         </ul>
     </div>
-
     <div class="fly-panel" style="margin-bottom: 0;">
-
         <div class="fly-panel-title fly-filter">
             <a href="" class="layui-this">综合</a>
             <span class="fly-mid"></span>
@@ -155,349 +66,57 @@
             <a href="">按热议</a>
           </span>
         </div>
-
         <ul class="fly-list">
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">分享</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
+            <li th:each="all:${session.all}">
+                <a th:href="@{/home/${all.username}}" class="fly-avatar">
+                    <img th:src="'http://localhost:8080/upload/'+${all.avatar}" th:alt="${all.username}">
                 </a>
                 <h2>
                     <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
+                    <a th:href="@{/detail/${all.id}}" th:text="${all.title}"></a>
                 </h2>
                 <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--<i class="iconfont icon-renzheng" title="认证信息：XXX"></i>-->
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>
+                    <span>
+                        <cite th:text="${all.username}"></cite>
+                        <i class="iconfont icon-renzheng" title="认证信息：zjj"></i>
+                        <i class="layui-badge fly-badge-vip" th:text="VIP+${all.vipLevel}"></i>
+                    </span>
+                    <span th:text="${#dates.format(all.created,'yyyy-MM-dd HH:mm:ss')}"></span>
+                    <!--                    th:text="${#dates.format(user.date, 'yyyy-MM-dd')}"-->
+                    <span class="fly-list-kiss layui-hide-xs" title="悬赏">
+                        <i class="layui-icon layui-icon-rmb" title="账户">&#xe65e;</i>
+                        <span th:text="${all.integral}"></span>
+                    </span>
+                    <span class="layui-badge fly-badge-accept layui-hide-xs" th:if="${all.status} eq 1">已结</span>
+                    <span class="layui-badge fly-badge-accept layui-hide-xs" th:if="${all.status} eq 0">未结</span>
                     <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
+                        <a th:href="@{/detail/${all.id}}">
+                            <i class="iconfont icon-pinglun1" title="回答"></i>
+                            <span th:text="${all.commentCount}"></span>
+                        </a>
               </span>
                 </div>
                 <div class="fly-list-badge">
-                    <span class="layui-badge layui-bg-red">精帖</span>
+                    <span th:if="${all.level} eq '1'" class="layui-badge layui-bg-black">置顶</span>
+                    <span th:if="${all.recommend}" class="layui-badge layui-bg-red">精帖</span>
                 </div>
             </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
 
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
-            <li>
-                <a href="user/home.html" class="fly-avatar">
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                </a>
-                <h2>
-                    <a class="layui-badge">动态</a>
-                    <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-                </h2>
-                <div class="fly-list-info">
-                    <a href="user/home.html" link>
-                        <cite>贤心</cite>
-                        <!--
-                        <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                        -->
-                    </a>
-                    <span>刚刚</span>
-
-                    <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-                    <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
-                    <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> 66
-              </span>
-                </div>
-                <div class="fly-list-badge">
-                    <!--<span class="layui-badge layui-bg-red">精帖</span>-->
-                </div>
-            </li>
         </ul>
         <div style="text-align: center">
             <div class="laypage-main">
-                <a href="jie/index.html" class="laypage-next">更多求解</a>
+                <a href="javascript:" class="laypage-next" name="page">首页</a>
+                <a href="javascript:" class="laypage-next" name="page">上一页</a>
+                <a href="javascript:" class="laypage-curr" name="page">1</a>
+                <a href="javascript:" class="laypage-next" name="page">2</a>
+                <a href="javascript:" class="laypage-next" name="page">3</a>
+                <a href="javascript:" class="laypage-next" name="page">4</a>
+                <a href="javascript:" class="laypage-next" name="page">5</a>
+                <span>...</span>
+                <a href="javascript:" class="laypage-next" name="page">下一页</a>
+                <a href="javascript:" class="laypage-next" name="page">尾页</a>
             </div>
         </div>
-
     </div>
 </div>
 </body>

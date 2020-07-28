@@ -4,6 +4,8 @@ package com.zjj.myblog.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.zjj.myblog.entity.Blog_User;
+import com.zjj.myblog.entity.HotBlog;
 import com.zjj.myblog.entity.Post;
 import com.zjj.myblog.entity.User;
 import com.zjj.myblog.service.PostService;
@@ -71,17 +73,19 @@ public class UserController {
     public String index(HttpServletRequest request) {
         HttpSession session = request.getSession();
 //        置顶的帖子
-        IPage ipageLevel = new Page(1,5);
-        QueryWrapper<Post> levelQW = new QueryWrapper<Post>().eq("level",1);
-        IPage pageLevel = postService.page(ipageLevel, levelQW);
-        List recordsLevel = pageLevel.getRecords();
+        List<Blog_User> recordsLevel = postService.listByPageLevel(0, 5);
         session.setAttribute("level",recordsLevel);
 //        所有的帖子
-        IPage ipageAll = new Page(1,10);
-        IPage pageAll = postService.page(ipageAll, null);
-        List recordsAll = pageAll.getRecords();
-        session.setAttribute("records",recordsAll);
-        session.setAttribute("total",pageAll.getTotal());
+        List<Blog_User> recordsAll = postService.listByPageAll(0, 10);
+        session.setAttribute("all",recordsAll);
+        int count = recordsAll.size();
+        session.setAttribute("count",count);
+//        本周热议
+        List<HotBlog> hot = postService.hot();
+        session.setAttribute("hot",hot);
+//        回帖总榜
+        List<User> users = userService.blogComment();
+        session.setAttribute("blogComment",users);
         return "index";
     }
 
@@ -92,21 +96,7 @@ public class UserController {
      */
     @RequestMapping("/")
     public String indexs(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-//        置顶的帖子
-        IPage ipageLevel = new Page(1,5);
-        QueryWrapper<Post> levelQW = new QueryWrapper<Post>().eq("level",1);
-        IPage pageLevel = postService.page(ipageLevel, levelQW);
-        List recordsLevel = pageLevel.getRecords();
-        session.setAttribute("level",recordsLevel);
-//        所有的帖子
-        IPage ipageAll = new Page(1,10);
-        IPage pageAll = postService.page(ipageAll, null);
-        List recordsAll = pageAll.getRecords();
-        session.setAttribute("all",recordsAll);
-        session.setAttribute("total",pageAll.getTotal());
-        return "index";
-
+        return this.index(request);
     }
 
     /**
@@ -187,11 +177,20 @@ public class UserController {
         return map;
     }
 
+    /**
+     * 查看帖子
+     * @param id
+     * @return
+     */
     @RequestMapping("/detail/{id:\\d*}")
     public String detail(@PathVariable(name = "id")Long id){
         return "option/detail";
     }
 
+    /**
+     * 测试
+     * @return
+     */
     @RequestMapping("/test")
     public String test() {
         return "test";

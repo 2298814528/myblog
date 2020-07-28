@@ -8,22 +8,15 @@ import java.sql.Timestamp;
 /**
  * 用于主页显示各项参数
  */
+//post.id,post.title,post.content,post.comment_count,post.recommend,post.level,post.created,user.username,
+//        user.vip_level,user.avatar
 @Data
 public class Blog_User {
-    /**
-     * 昵称
-     */
-    private String username;
 
     /**
-     * vip等级
+     * id
      */
-    private Integer vipLevel;
-
-    /**
-     * 头像
-     */
-    private String avatar;
+    private int id;
 
     /**
      * 标题
@@ -46,6 +39,11 @@ public class Blog_User {
     private Boolean recommend;
 
     /**
+     * 状态（已结、未结）
+     */
+    private int status;
+
+    /**
      * 置顶等级
      */
     private Integer level;
@@ -53,6 +51,27 @@ public class Blog_User {
     /**
      * 发布时间
      */
-    @TableField("created")
     private Timestamp created;
+
+    /**
+     * 积分
+     */
+    private Integer integral;
+
+    /**
+     * 昵称
+     */
+    private String username;
+
+    /**
+     * vip等级
+     */
+    private Integer vipLevel;
+
+    /**
+     * 头像
+     */
+    private String avatar;
+
+
 }
