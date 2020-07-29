@@ -1,6 +1,5 @@
 package com.zjj.myblog.utils;
 
-import com.zjj.myblog.entity.Blog_User;
 import com.zjj.myblog.entity.HotBlog;
 import org.springframework.stereotype.Component;
 
