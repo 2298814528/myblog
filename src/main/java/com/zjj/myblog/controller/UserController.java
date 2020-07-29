@@ -39,8 +39,7 @@ import java.util.Map;
 public class UserController {
     @Autowired
     UserService userService;
-    @Autowired
-    CheckCode checkCode;
+
     @Autowired
     PostService postService;
 
@@ -150,32 +149,7 @@ public class UserController {
         return "/user/index";
     }
 
-    /**
-     * 生成验证码
-     * @param request
-     * @param response
-     * @throws IOException
-     */
-    @RequestMapping("/code")
-    public void code(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        checkCode = new CheckCode(120, 36, 5, 10);
-        ImageIO.write(checkCode.getBuffImg(), "jpg", response.getOutputStream());
-    }
 
-    /**
-     * 发送异步获取验证码
-     * @param request
-     * @return
-     * @throws IOException
-     */
-    @ResponseBody
-    @RequestMapping("/codes")
-    public Map<String,String> codes(HttpServletRequest request) throws IOException {
-        Map<String,String> map=new HashMap<String, String>();
-        String code = checkCode.getCode();
-        map.put("code",code);
-        return map;
-    }
 
     /**
      * 查看帖子
@@ -188,12 +162,22 @@ public class UserController {
     }
 
     /**
+     * 登录的中间处理
+     * @return
+     */
+    @RequestMapping("/blogHome")
+    public String test2() {
+        return "index";
+    }
+
+    /**
      * 测试
      * @return
      */
     @RequestMapping("/test")
     public String test() {
-        return "test";
+        return "redirect:/hh";
+//        return "test";
     }
 
 

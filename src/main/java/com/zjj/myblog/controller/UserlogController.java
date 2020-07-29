@@ -8,18 +8,23 @@ import com.zjj.myblog.entity.Usersign;
 import com.zjj.myblog.service.UserService;
 import com.zjj.myblog.service.UserlogService;
 import com.zjj.myblog.service.UsersignService;
+import com.zjj.myblog.utils.CheckCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import org.springframework.web.bind.annotation.RestController;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -38,6 +43,8 @@ public class UserlogController {
     UserlogService userlogService;
     @Autowired
     UsersignService usersignService;
+    @Autowired
+    CheckCode checkCode;
 
     /**
      * 登录跳转
@@ -111,7 +118,7 @@ public class UserlogController {
             session.setAttribute("wechat",user.getWechat());
 //            生日
             session.setAttribute("birthday",user.getBirthday());
-            return "redirect:/index";
+            return "redirect:/blogHome";
         }
     }
 
@@ -126,7 +133,34 @@ public class UserlogController {
         while (attributeNames.hasMoreElements()) {
             request.getSession().removeAttribute(attributeNames.nextElement().toString());
         }
-        return "index";
+        return "redirect:/index";
+    }
+
+    /**
+     * 生成验证码
+     * @param request
+     * @param response
+     * @throws IOException
+     */
+    @RequestMapping("/code")
+    public void code(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        checkCode = new CheckCode(120, 36, 5, 10);
+        ImageIO.write(checkCode.getBuffImg(), "jpg", response.getOutputStream());
+    }
+
+    /**
+     * 发送异步获取验证码
+     * @param request
+     * @return
+     * @throws IOException
+     */
+    @ResponseBody
+    @RequestMapping("/codes")
+    public Map<String,String> codes(HttpServletRequest request) throws IOException {
+        Map<String,String> map=new HashMap<String, String>();
+        String code = checkCode.getCode();
+        map.put("code",code);
+        return map;
     }
 
 }

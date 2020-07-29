@@ -4,25 +4,12 @@
     <list default="true" id="ef61ffad-e0fd-4b55-a09f-28901817f1e5" name="Default Changelist" comment="修改了post、user的controller，增加了分页的实体类  --by  zjj  2020/7/27 21:48">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Blog_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Blog_User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/PostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/utils/ObjToString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/utils/ObjToString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/utils/PageBean.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,18 +60,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.last.introduce.type" value="VAR" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/upload" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.zjj.myblog.config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IDEA\myblog\src\main\resources\static\js" />
-      <recent name="D:\IDEA\myblog\src\main\resources\templates" />
-      <recent name="D:\IDEA\myblog\src\main\resources" />
-      <recent name="D:\IDEA\myblog\src\main\resources\static" />
-      <recent name="D:\IDEA\myblog\src\main\resources\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IDEA\myblog\src\main\resources\static\upload" />
@@ -92,6 +72,13 @@
       <recent name="D:\IDEA\myblog\src\main\resources\static\jq" />
       <recent name="D:\IDEA\myblog\src\main\resources\static\layui" />
       <recent name="D:\IDEA\myblog\src\main\resources\static\layui\dist" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA\myblog\src\main\resources\static\js" />
+      <recent name="D:\IDEA\myblog\src\main\resources\templates" />
+      <recent name="D:\IDEA\myblog\src\main\resources" />
+      <recent name="D:\IDEA\myblog\src\main\resources\static" />
+      <recent name="D:\IDEA\myblog\src\main\resources\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -207,7 +194,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -229,7 +216,8 @@
       <workItem from="1595691678182" duration="1150000" />
       <workItem from="1595729140367" duration="48678000" />
       <workItem from="1595907044433" duration="7745000" />
-      <workItem from="1595924231674" duration="12032000" />
+      <workItem from="1595924231674" duration="14430000" />
+      <workItem from="1596002980410" duration="3680000" />
     </task>
     <task id="LOCAL-00001" summary="by zjj">
       <created>1594294986639</created>
@@ -455,7 +443,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595857714298</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="修改了post、user的controller，增加了分页的实体类  --by  zjj  2020/7/27 21:48">
+      <created>1595944921601</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1595944921601</updated>
+    </task>
+    <task id="LOCAL-00034" summary="修改了post、user的controller，增加了分页的实体类  --by  zjj  2020/7/27 21:48">
+      <created>1595945040712</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1595945040712</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,10 +495,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594993523633" />
-    <state x="161" y="0" key="CommitChangelistDialog2" timestamp="1595944917318">
+    <state x="161" y="0" key="CommitChangelistDialog2" timestamp="1595945039142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="161" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595944917318" />
+    <state x="161" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595945039142" />
     <state x="708" y="130" key="FileChooserDialogImpl" timestamp="1595860923403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -505,70 +507,70 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="490" y="269" width="373" height="203" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1594574860312" />
-    <state width="1323" height="277" key="GridCell.Tab.0.bottom" timestamp="1595935427539">
+    <state width="1323" height="387" key="GridCell.Tab.0.bottom" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595935427539" />
-    <state width="1323" height="277" key="GridCell.Tab.0.center" timestamp="1595935427539">
+    <state width="1323" height="387" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.0.center" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595935427539" />
-    <state width="1323" height="277" key="GridCell.Tab.0.left" timestamp="1595935427539">
+    <state width="1323" height="387" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.0.left" timestamp="1596006709169">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595935427539" />
-    <state width="1323" height="277" key="GridCell.Tab.0.right" timestamp="1595935427539">
+    <state width="1323" height="387" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596006709169" />
+    <state width="1323" height="387" key="GridCell.Tab.0.right" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595935427539" />
-    <state width="1323" height="277" key="GridCell.Tab.1.bottom" timestamp="1595935427540">
+    <state width="1323" height="387" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.1.bottom" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595935427540" />
-    <state width="1323" height="277" key="GridCell.Tab.1.center" timestamp="1595935427540">
+    <state width="1323" height="387" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.1.center" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595935427540" />
-    <state width="1323" height="277" key="GridCell.Tab.1.left" timestamp="1595935427540">
+    <state width="1323" height="387" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.1.left" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595935427540" />
-    <state width="1323" height="277" key="GridCell.Tab.1.right" timestamp="1595935427540">
+    <state width="1323" height="387" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.1.right" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="277" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595935427540" />
-    <state width="1323" height="346" key="GridCell.Tab.2.bottom" timestamp="1595934572073">
+    <state width="1323" height="387" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.2.bottom" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="346" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595934572073" />
-    <state width="1323" height="346" key="GridCell.Tab.2.center" timestamp="1595934572073">
+    <state width="1323" height="387" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.2.center" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="346" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1595934572073" />
-    <state width="1323" height="346" key="GridCell.Tab.2.left" timestamp="1595934572073">
+    <state width="1323" height="387" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.2.left" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="346" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1595934572073" />
-    <state width="1323" height="346" key="GridCell.Tab.2.right" timestamp="1595934572073">
+    <state width="1323" height="387" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
+    <state width="1323" height="387" key="GridCell.Tab.2.right" timestamp="1596006709170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="346" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1595934572073" />
+    <state width="1323" height="387" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1596006709170" />
     <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1594298458517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1594298458517" />
-    <state x="93" y="19" key="SettingsEditor" timestamp="1595085925106">
+    <state x="93" y="19" key="SettingsEditor" timestamp="1596004500153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="93" y="19" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595085925106" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1595944924090">
+    <state x="93" y="19" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596004500153" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1595945041934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595944924090" />
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595691755333">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595945041934" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596006701005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1595691755333" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1596006701005" />
     <state x="454" y="95" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595086225599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -614,14 +616,19 @@
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/PostServiceImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="80" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="81" />
+          <line>169</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
