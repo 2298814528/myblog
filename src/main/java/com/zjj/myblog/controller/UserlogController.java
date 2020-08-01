@@ -102,22 +102,23 @@ public class UserlogController {
             session.setAttribute("day", dayCount);
 //            传入前端用户名
             session.setAttribute("username", username);
-//            传入前端头像位置
-            session.setAttribute("avatar", user.getAvatar());
-//            传入VIP等级
-            session.setAttribute("vipLevel", "VIP" + user.getVipLevel());
-//            传入前端性别
-            session.setAttribute("gender",user.getGender());
-//            传入前端签名
-            session.setAttribute("sign",user.getSign());
-//            传入前端email
-            session.setAttribute("email",user.getEmail());
-//            密码
-            session.setAttribute("password",user.getPassword());
-//            微信
-            session.setAttribute("wechat",user.getWechat());
-//            生日
-            session.setAttribute("birthday",user.getBirthday());
+            session.setAttribute("user",user);
+////            传入前端头像位置
+//            session.setAttribute("avatar", user.getAvatar());
+////            传入VIP等级
+//            session.setAttribute("vipLevel", "VIP" + user.getVipLevel());
+////            传入前端性别
+//            session.setAttribute("gender",user.getGender());
+////            传入前端签名
+//            session.setAttribute("sign",user.getSign());
+////            传入前端email
+//            session.setAttribute("email",user.getEmail());
+////            密码
+//            session.setAttribute("password",user.getPassword());
+////            微信
+//            session.setAttribute("wechat",user.getWechat());
+////            生日
+//            session.setAttribute("birthday",user.getBirthday());
             return "redirect:/blogHome";
         }
     }

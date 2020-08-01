@@ -10,7 +10,7 @@
 <div class="fly-header layui-bg-black" th:fragment="topbar1">
     <div class="layui-container">
 
-            <img th:src="${uri} == 'userIndex'?'http://localhost:8080/res/images/logo.png':'res/images/logo.png'"
+            <img th:src="'http://localhost:8080/res/images/logo.png'"
                  alt="zjj" class="fly-logo">
 
         <ul class="layui-nav fly-nav layui-hide-xs">
@@ -51,9 +51,9 @@
                 <a class="fly-nav-avatar" href="javascript:;">
                     <cite class="layui-hide-xs" id="username" th:text="${session.username}">xxx</cite>
                     <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：zjj"></i>
-                    <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="${session.vipLevel}">VIP0</i>
+                    <i class="layui-badge fly-badge-vip layui-hide-xs" th:text="'VIP'+${session.user.vipLevel}">VIP0</i>
                     <img style="height: 30px;width: 30px"
-                         th:src="'http://localhost:8080/upload/'+${session.avatar}">
+                         th:src="'http://localhost:8080/upload/'+${session.user.avatar}">
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a th:href="@{/set(msg='set')}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
