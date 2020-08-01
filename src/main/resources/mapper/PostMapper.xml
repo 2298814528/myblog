@@ -31,4 +31,14 @@
         ORDER BY comment_count DESC LIMIT 0,10;
     </select>
 
+    <select id="getOne" resultType="com.zjj.myblog.entity.Blog_User" parameterType="Integer">
+        select
+        post.id,post.title,post.content,post.comment_count,post.recommend,post.status,post.level,post.created,post.integral,
+        user.username,user.vip_level,user.avatar
+        from post,user
+        <where>
+            post.user_id = user.id and post.id = #{id};
+        </where>
+    </select>
+
 </mapper>

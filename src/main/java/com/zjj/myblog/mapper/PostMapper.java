@@ -19,9 +19,32 @@ import java.util.Map;
  */
 public interface PostMapper extends BaseMapper<Post> {
 
+    /**
+     * 置顶
+     * @param current
+     * @param size
+     * @return
+     */
     List<Blog_User> listByPageLevel(Integer current,Integer size);
 
+    /**
+     * 所有
+     * @param current
+     * @param size
+     * @return
+     */
     List<Blog_User> listByPageAll(Integer current, Integer size);
 
+    /**
+     * 热议
+     * @return
+     */
     List<HotBlog> getHot();
+
+    /**
+     * 单个帖子
+     * @param id
+     * @return
+     */
+    Blog_User getOne(int id);
 }

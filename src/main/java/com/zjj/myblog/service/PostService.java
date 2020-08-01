@@ -39,4 +39,11 @@ public interface PostService extends IService<Post> {
      * @return
      */
     List<HotBlog> hot();
+
+    /**
+     * 查询单张帖子
+     * @param id
+     * @return
+     */
+    Blog_User selectOne(int id);
 }

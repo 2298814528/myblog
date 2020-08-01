@@ -66,4 +66,10 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
         return conversion;
     }
 
+    @Override
+    public Blog_User selectOne(int id) {
+        Blog_User blog_user = postMapper.getOne(id);
+        return blog_user;
+    }
+
 }
