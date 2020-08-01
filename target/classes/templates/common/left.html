@@ -105,16 +105,15 @@
         </ul>
         <div style="text-align: center">
             <div class="laypage-main">
-                <a href="javascript:" class="laypage-next" name="page">首页</a>
-                <a href="javascript:" class="laypage-next" name="page">上一页</a>
-                <a href="javascript:" class="laypage-curr" name="page">1</a>
-                <a href="javascript:" class="laypage-next" name="page">2</a>
-                <a href="javascript:" class="laypage-next" name="page">3</a>
-                <a href="javascript:" class="laypage-next" name="page">4</a>
-                <a href="javascript:" class="laypage-next" name="page">5</a>
-                <span>...</span>
-                <a href="javascript:" class="laypage-next" name="page">下一页</a>
-                <a href="javascript:" class="laypage-next" name="page">尾页</a>
+                <a th:href="@{/index}" class="laypage-next" name="page" th:if="${session.current} gt 1">首页</a>
+                <a th:href="@{/index(current = ${session.current} - 1)}" class="laypage-next" name="page" th:if="${session.current} - 1 gt 0">上一页</a>
+                <a th:href="@{/index(current = ${session.current} - 2)}" class="laypage-next" name="page" th:if="${session.current} - 2 gt 0" th:text="${session.current} - 2"></a>
+                <a th:href="@{/index(current = ${session.current} - 1)}" class="laypage-next" name="page" th:if="${session.current} - 1 gt 0" th:text="${session.current} - 1"></a>
+                <a href="javascript:" class="laypage-curr" name="page" th:text="${session.current}"></a>
+                <a th:href="@{/index(current = ${session.current} + 1)}" class="laypage-next" name="page" th:if="${session.current} + 1 le ${session.count}" th:text="${session.current} + 1"></a>
+                <a th:href="@{/index(current = ${session.current} + 2)}" class="laypage-next" name="page" th:if="${session.current} + 2 le ${session.count}" th:text="${session.current} + 2"></a>
+                <a th:href="@{/index(current = ${session.current} + 1)}" class="laypage-next" name="page" th:if="${session.current} lt ${session.count}">下一页</a>
+                <a th:href="@{/index(current = ${session.count})}" class="laypage-next" name="page" th:if="${session.current} lt ${session.count}">尾页</a>
             </div>
         </div>
     </div>
