@@ -3,6 +3,7 @@ package com.zjj.myblog.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
@@ -11,7 +12,7 @@ import java.sql.Timestamp;
 //post.id,post.title,post.content,post.comment_count,post.recommend,post.level,post.created,user.username,
 //        user.vip_level,user.avatar
 @Data
-public class Blog_User {
+public class Blog_User implements Serializable {
 
     /**
      * id

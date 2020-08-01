@@ -14,9 +14,9 @@
 
     <select id="listByPageAll" parameterType="Integer" resultType="com.zjj.myblog.entity.Blog_User">
         select
-         post.id,post.title,post.content,post.comment_count,post.recommend,post.status,post.level,post.created,post.integral,
-         user.username,user.vip_level,user.avatar
-         from post,user
+        post.id,post.title,post.content,post.comment_count,post.recommend,post.status,post.level,post.created,post.integral,
+        user.username,user.vip_level,user.avatar
+        from post,user
         <where>
             post.user_id = user.id
         </where>

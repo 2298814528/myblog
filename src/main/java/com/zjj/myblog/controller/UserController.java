@@ -37,6 +37,11 @@ import java.util.Map;
  */
 @Controller
 public class UserController {
+    //    当前页
+    private int current;
+    //    总共的页数
+    private int size = 2;
+
     @Autowired
     UserService userService;
 
@@ -68,17 +73,29 @@ public class UserController {
      *
      * @return
      */
-    @RequestMapping("/index")
+    @RequestMapping(value = {"/index","/"})
     public String index(HttpServletRequest request) {
         HttpSession session = request.getSession();
 //        置顶的帖子
         List<Blog_User> recordsLevel = postService.listByPageLevel(0, 5);
         session.setAttribute("level",recordsLevel);
+//        获取当前页数
+        String currentPage = request.getParameter("current");  //3
+        if (currentPage == null) {
+            current = 1;
+        } else {
+            double i = Double.valueOf(currentPage);
+            current = new Double(i).intValue();;//3
+        }
+//        储存当前页
+        session.setAttribute("current", current);//3
 //        所有的帖子
-        List<Blog_User> recordsAll = postService.listByPageAll(0, 10);
-        session.setAttribute("all",recordsAll);
-        int count = recordsAll.size();
-        session.setAttribute("count",count);
+        List<Blog_User> recordsAll = postService.listByPageAll((current - 1) * size, size);//从0开始  查询10条  也就是1
+        session.setAttribute("all", recordsAll);
+        int counts = postService.count(null);
+//        总共的页数
+        double count = Math.floor(counts / size);
+        session.setAttribute("count", count);
 //        本周热议
         List<HotBlog> hot = postService.hot();
         session.setAttribute("hot",hot);
@@ -88,15 +105,6 @@ public class UserController {
         return "index";
     }
 
-    /**
-     * 主页
-     *
-     * @return
-     */
-    @RequestMapping("/")
-    public String indexs(HttpServletRequest request) {
-        return this.index(request);
-    }
 
     /**
      * 用户中心
