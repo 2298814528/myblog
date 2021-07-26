@@ -1,5 +1,6 @@
 $("#SignBtn").click
 var username = sessionStorage.getItem("user");
+
 function signIn() {
     alert(123)
     if (username == null || username == "") {

@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-
-
 @Component
 public class CheckCode {
     // 图片的宽度。
@@ -110,7 +108,7 @@ public class CheckCode {
             // g.drawString(a,x,y);
             // a为要画出来的东西，x和y表示要画的东西最左侧字符的基线位于此图形上下文坐标系的 (x, y) 位置处
 
-            g.drawString(strRand, i*fontWidth+3, codeY);
+            g.drawString(strRand, i * fontWidth + 3, codeY);
         }
     }
 
@@ -201,8 +199,6 @@ public class CheckCode {
             }
         }
     }
-
-
 
 
     public String getCode() {

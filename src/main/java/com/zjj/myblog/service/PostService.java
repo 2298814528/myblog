@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author author
@@ -20,28 +20,32 @@ import java.util.Map;
 public interface PostService extends IService<Post> {
     /**
      * 分页查询置顶
+     *
      * @param current
      * @param size
      * @return
      */
-    List<Blog_User> listByPageLevel(Integer current,Integer size);
+    List<Blog_User> listByPageLevel(Integer current, Integer size);
 
     /**
      * 分页查询总的帖子
+     *
      * @param current
      * @param size
      * @return
      */
-    List<Blog_User> listByPageAll(Integer current,Integer size);
+    List<Blog_User> listByPageAll(Integer current, Integer size);
 
     /**
      * 本周热议
+     *
      * @return
      */
     List<HotBlog> hot();
 
     /**
      * 查询单张帖子
+     *
      * @param id
      * @return
      */

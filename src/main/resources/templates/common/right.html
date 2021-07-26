@@ -64,7 +64,7 @@
         <h3 class="fly-panel-title">回贴总榜</h3>
         <dl>
             <!--<i class="layui-icon fly-loading">&#xe63d;</i>-->
-            <dd  th:each="blog:${session.blogComment}">
+            <dd th:each="blog:${session.blogComment}">
                 <a th:href="@{/home/${blog.username}}">
                     <img th:src="'http://localhost:8080/upload/'+${blog.avatar}" th:alt="${blog.username}">
                     <cite th:text="${blog.username}"></cite>

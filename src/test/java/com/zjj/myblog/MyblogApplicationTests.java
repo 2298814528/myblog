@@ -91,9 +91,9 @@ class MyblogApplicationTests {
         List<HotBlog> hot = postService.hot();
         hot.get(0);
     }
-    
+
     @Test
-    public void BlogComment(){
+    public void BlogComment() {
         List<User> users = userService.blogComment();
         User user = users.get(0);
     }

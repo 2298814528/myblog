@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MyblogApplication {
 
     public static void main(String[] args) {
-        System.out.println("http://localhost:8080/");
+        System.out.println("http://localhost:8081/");
         SpringApplication.run(MyblogApplication.class, args);
     }
 

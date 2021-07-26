@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author author
@@ -21,14 +21,16 @@ public interface PostMapper extends BaseMapper<Post> {
 
     /**
      * 置顶
+     *
      * @param current
      * @param size
      * @return
      */
-    List<Blog_User> listByPageLevel(Integer current,Integer size);
+    List<Blog_User> listByPageLevel(Integer current, Integer size);
 
     /**
      * 所有
+     *
      * @param current
      * @param size
      * @return
@@ -37,12 +39,14 @@ public interface PostMapper extends BaseMapper<Post> {
 
     /**
      * 热议
+     *
      * @return
      */
     List<HotBlog> getHot();
 
     /**
      * 单个帖子
+     *
      * @param id
      * @return
      */

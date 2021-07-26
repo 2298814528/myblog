@@ -1,8 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ef61ffad-e0fd-4b55-a09f-28901817f1e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/MyblogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/MyblogApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserCollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserCollectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UsersignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UsersignController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/UserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/UserCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/UserCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/UserMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/UserMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Userlog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Userlog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Usersign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/entity/Usersign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserActionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserActionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserCollectionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserCollectionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/mapper/UserMessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserActionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserCollectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserCollectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserActionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserActionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserCollectionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserCollectionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserMessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/utils/CheckCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zjj/myblog/utils/CheckCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/my.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/my.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/jq/jquery-3.4.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/jq/jquery-3.4.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/dist/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/dist/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/css/full.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/full.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/css/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/css/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/mods/case.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/case.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/mods/face.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/face.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/mods/jie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/jie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/res/mods/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/res/mods/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/user-left.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/user-left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/option/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/option/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/option/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/option/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/option/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/option/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/other/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/other/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/other/tips.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/other/tips.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/active.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/active.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/forget.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/forget.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/reg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/res/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/res/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/face.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/res/mods/face.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/jie.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/res/mods/jie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/res/mods/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/res/mods/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/active.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/active.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,19 +123,13 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\maven\storehouse" />
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="C:\Users\Administrator\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1eRnYCq8jRV242ITHd8xhk2tnOU" />
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -48,11 +138,13 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/upload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -174,17 +266,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
@@ -211,7 +295,26 @@
       <workItem from="1595907044433" duration="7745000" />
       <workItem from="1595924231674" duration="14430000" />
       <workItem from="1596002980410" duration="3932000" />
-      <workItem from="1596221110216" duration="13137000" />
+      <workItem from="1596221110216" duration="14126000" />
+      <workItem from="1596325133712" duration="387000" />
+      <workItem from="1596325667900" duration="687000" />
+      <workItem from="1596328363840" duration="1987000" />
+      <workItem from="1596359408693" duration="29000" />
+      <workItem from="1596376646068" duration="184000" />
+      <workItem from="1596385210060" duration="1556000" />
+      <workItem from="1596444786172" duration="685000" />
+      <workItem from="1596480432250" duration="1141000" />
+      <workItem from="1596481858296" duration="731000" />
+      <workItem from="1596524895211" duration="7437000" />
+      <workItem from="1596551894738" duration="19000" />
+      <workItem from="1596619178863" duration="139000" />
+      <workItem from="1596630311197" duration="377000" />
+      <workItem from="1596725642221" duration="957000" />
+      <workItem from="1596728160467" duration="1728000" />
+      <workItem from="1596772878599" duration="708000" />
+      <workItem from="1607757294015" duration="248000" />
+      <workItem from="1626529996249" duration="496000" />
+      <workItem from="1627312670770" duration="824000" />
     </task>
     <task id="LOCAL-00001" summary="by zjj">
       <created>1594294986639</created>
@@ -507,11 +610,18 @@
       <option name="project" value="LOCAL" />
       <updated>1596263629081</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="前端user/index --by  zjj">
+      <created>1596323462312</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1596323462312</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -536,118 +646,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="前端user/index --by  zjj" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="182" y="35" key="#HTTP_Proxy" timestamp="1594295682700">
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1627313497715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="35" key="#HTTP_Proxy/0.0.1366.728@0.0.1366.728" timestamp="1594295682700" />
-    <state x="862" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1595929887817">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="862" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595929887817" />
-    <state x="490" y="292" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1594302193472">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="490" y="292" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1594302193472" />
-    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596256326692">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596256326692" />
-    <state x="268" y="0" key="CommitChangelistDialog2" timestamp="1596263626484">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="268" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596263626484" />
-    <state x="708" y="130" key="FileChooserDialogImpl" timestamp="1595860923403">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="708" y="130" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595860923403" />
-    <state x="490" y="269" width="373" height="203" key="Github.CreateGistDialog" timestamp="1594574860312">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="490" y="269" width="373" height="203" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1594574860312" />
-    <state width="1323" height="340" key="GridCell.Tab.0.bottom" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.0.center" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.0.left" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.0.right" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.1.bottom" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.1.center" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.1.left" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="340" key="GridCell.Tab.1.right" timestamp="1596256553601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="340" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596256553601" />
-    <state width="1323" height="325" key="GridCell.Tab.2.bottom" timestamp="1596253428776">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="325" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596253428776" />
-    <state width="1323" height="325" key="GridCell.Tab.2.center" timestamp="1596253428776">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="325" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1596253428776" />
-    <state width="1323" height="325" key="GridCell.Tab.2.left" timestamp="1596253428776">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="325" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1596253428776" />
-    <state width="1323" height="325" key="GridCell.Tab.2.right" timestamp="1596253428776">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="325" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1596253428776" />
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1594298458517">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1594298458517" />
-    <state x="93" y="19" key="SettingsEditor" timestamp="1596004500153">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="93" y="19" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596004500153" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1596263631488">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596263631488" />
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596006701005">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1596006701005" />
-    <state x="454" y="95" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595086225599">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="454" y="95" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1595086225599" />
-    <state x="57" y="72" key="new project wizard" timestamp="1594530822257">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="57" y="72" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594530822257" />
-    <state x="248" y="255" width="672" height="285" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1594298257988">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="248" y="255" width="672" height="285" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1594298257988" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1594918729164">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1594918729164" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595909662999">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595909662999" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1627313497715" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -671,6 +673,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/zjj/myblog/MyblogApplicationTests.java</url>
           <line>98</line>
           <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zjj/myblog/controller/UserlogController.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

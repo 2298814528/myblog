@@ -68,7 +68,8 @@
                                     <div class="layui-input-inline">
                                     <textarea type="text" id="sign" name="sign"
                                               required lay-verify="required" autocomplete="off"
-                                              class="layui-input" style="resize: none;overflow:hidden" maxlength="24"></textarea>
+                                              class="layui-input" style="resize: none;overflow:hidden"
+                                              maxlength="24"></textarea>
                                     </div>
                                     <div class="layui-form-mid layui-word-aux">最多24个字</div>
                                 </div>
@@ -89,7 +90,8 @@
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">生日</label>
                                     <div class="layui-input-inline">
-                                        <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                                        <input type="text" name="date" id="date" lay-verify="date"
+                                               placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
@@ -98,9 +100,9 @@
                                         <div class="div2">点击上传</div>
                                         <input type="file" name="file" class="file_input">
                                     </div>
-<!--                                    <input type="file" name="file" required lay-verify="required"-->
-<!--                                           accept="image/jpeg,image/jpg,image/png">-->
-<!--                                    <label class="layui-form-mid layui-word-aux">只能是200*200</label>-->
+                                    <!--                                    <input type="file" name="file" required lay-verify="required"-->
+                                    <!--                                           accept="image/jpeg,image/jpg,image/png">-->
+                                    <!--                                    <label class="layui-form-mid layui-word-aux">只能是200*200</label>-->
                                 </div>
                                 <div class="layui-form-item">
                                     <label for="vercode" class="layui-form-label">验证码</label>
@@ -146,7 +148,7 @@
     );
 </script>
 <script>
-    layui.use(['form', 'layedit', 'laydate'], function(){
+    layui.use(['form', 'layedit', 'laydate'], function () {
         laydate = layui.laydate;
 
         //日期

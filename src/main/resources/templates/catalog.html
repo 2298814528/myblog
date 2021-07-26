@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <title>blog1.0所有页面目录</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="页面目录">
-  <meta name="description" content="页面目录详情介绍界面">
-  <link rel="stylesheet" href="res/layui/css/layui.css">
-  <link rel="stylesheet" href="res/css/global.css">
+    <meta charset="utf-8">
+    <title>blog1.0所有页面目录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="页面目录">
+    <meta name="description" content="页面目录详情介绍界面">
+    <link rel="stylesheet" href="res/layui/css/layui.css">
+    <link rel="stylesheet" href="res/css/global.css">
 </head>
 <body>
 
 <h1 style="position: absolute; width:100%; text-align: center; top: 20px; left: 0; font-size: 20px; color: #333;">
-  基于 layui 的极简社区页面模版：Fly Template v3.0 所有页面目录
+    基于 layui 的极简社区页面模版：Fly Template v3.0 所有页面目录
 </h1>
 
 <div class="layui-container">
-  <table class="layui-table layui-text">
-    <colgroup>
-      <col width="150">
-      <col>
-    </colgroup>
-    <thead>
-      <tr>
-        <th>页面</th>
-        <th>目录</th>
-      </tr> 
-    </thead>
-    <tbody>
-      <tr>
-        <td>首页</td>
-        <td><a th:href="@{/index}" target="_blank">index.html</td>
-      </tr>
-      
-      <tr>
-        <td colspan="2" style="text-align: center">帖子相关</td>
-      </tr>
-      <tr>
-        <td>列表</td>
-        <td><a th:href="@{/index}" target="_blank">index.html</td>
-      </tr>
-      <tr>
-        <td>详情</td>
-        <td><a th:href="@{/option/detail}" target="_blank">option/detail.html</td>
-      </tr>
-      <tr>
-        <td>发帖/编辑</td>
-        <td><a th:href="@{/option/add}" target="_blank">option/add.html</td>
-      </tr>
+    <table class="layui-table layui-text">
+        <colgroup>
+            <col width="150">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>页面</th>
+            <th>目录</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>首页</td>
+            <td><a th:href="@{/index}" target="_blank">index.html</td>
+        </tr>
 
-      <tr>
-        <td colspan="2" style="text-align: center">用户相关</td>
-      </tr>
-      <tr>
-        <td>注册</td>
-        <td><a th:href="@{/user/reg}" target="_blank">user/reg.html</td>
-      </tr>
-      <tr>
-        <td>登入</td>
-        <td><a th:href="@{/user/login}" target="_blank">user/login.html</td>
-      </tr>
-      <tr>
-        <td>找回密码</td>
-        <td><a th:href="@{/user/forget}" target="_blank">user/forget.html</td>
-      </tr>
-      <tr>
-        <td>我的主页</td>
-        <td><a th:href="@{/user/home}" target="_blank">user/home.html</td>
-      </tr>
-      <tr>
-        <td>用户中心</td>
-        <td><a th:href="@{/user/index}" target="_blank">user/index.html</td>
-      </tr>
-      <tr>
-        <td>基本设置</td>
-        <td><a th:href="@{/user/set}" target="_blank">user/set.html</td>
-      </tr>
-      <tr>
-        <td>我的消息</td>
-        <td><a th:href="@{/user/message}" target="_blank">user/message.html</td>
-      </tr>
-      <tr>
-        <td>邮箱激活</td>
-        <td><a th:href="@{/user/active}" target="_blank">user/activate.html</td>
-      </tr>
-      
-      <tr>
-        <td colspan="2" style="text-align: center">其它</td>
-      </tr>
-      <tr>
-        <td>提示</td>
-        <td><a th:href="@{/other/tips}" target="_blank">other/tips.html</td>
-      </tr>
-      <tr>
-        <td>公告</td>
-        <td><a th:href="@{/other/notice}" target="_blank">other/notice.html</td>
-      </tr>
-      <tr>
-        <td>404</td>
-        <td><a th:href="@{error/4xx}" target="_blank">error/4xx.html</td>
-      </tr>
-      <tr>
-        <td>500</td>
-        <td><a th:href="@{error/5xx}" target="_blank">error/5xx.html</td>
-      </tr>
-    </tbody>
-  </table>
+        <tr>
+            <td colspan="2" style="text-align: center">帖子相关</td>
+        </tr>
+        <tr>
+            <td>列表</td>
+            <td><a th:href="@{/index}" target="_blank">index.html</td>
+        </tr>
+        <tr>
+            <td>详情</td>
+            <td><a th:href="@{/option/detail}" target="_blank">option/detail.html</td>
+        </tr>
+        <tr>
+            <td>发帖/编辑</td>
+            <td><a th:href="@{/option/add}" target="_blank">option/add.html</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center">用户相关</td>
+        </tr>
+        <tr>
+            <td>注册</td>
+            <td><a th:href="@{/user/reg}" target="_blank">user/reg.html</td>
+        </tr>
+        <tr>
+            <td>登入</td>
+            <td><a th:href="@{/user/login}" target="_blank">user/login.html</td>
+        </tr>
+        <tr>
+            <td>找回密码</td>
+            <td><a th:href="@{/user/forget}" target="_blank">user/forget.html</td>
+        </tr>
+        <tr>
+            <td>我的主页</td>
+            <td><a th:href="@{/user/home}" target="_blank">user/home.html</td>
+        </tr>
+        <tr>
+            <td>用户中心</td>
+            <td><a th:href="@{/user/index}" target="_blank">user/index.html</td>
+        </tr>
+        <tr>
+            <td>基本设置</td>
+            <td><a th:href="@{/user/set}" target="_blank">user/set.html</td>
+        </tr>
+        <tr>
+            <td>我的消息</td>
+            <td><a th:href="@{/user/message}" target="_blank">user/message.html</td>
+        </tr>
+        <tr>
+            <td>邮箱激活</td>
+            <td><a th:href="@{/user/active}" target="_blank">user/activate.html</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center">其它</td>
+        </tr>
+        <tr>
+            <td>提示</td>
+            <td><a th:href="@{/other/tips}" target="_blank">other/tips.html</td>
+        </tr>
+        <tr>
+            <td>公告</td>
+            <td><a th:href="@{/other/notice}" target="_blank">other/notice.html</td>
+        </tr>
+        <tr>
+            <td>404</td>
+            <td><a th:href="@{error/4xx}" target="_blank">error/4xx.html</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td><a th:href="@{error/5xx}" target="_blank">error/5xx.html</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 <div th:replace="common/footer::footer"></div>
 <script src="res/layui/layui.js" type="application/javascript" charset="utf-8"></script>
 <script src="js/footer.js" charset="utf-8"></script>
 <script>
-  layui.cache.page = '';
-  layui.cache.user = {
-    username: '游客'
-    , uid: -1
-    , avatar: 'res/images/avatar/00.jpg'
-    , experience: 83
-    , sex: '男'
-  };
-  layui.config({
-    version: "3.0.0"
-    , base: 'res/mods/' //这里实际使用时，建议改成绝对路径
-  }).extend({
-    fly: 'index'
-  }).use('fly');
+    layui.cache.page = '';
+    layui.cache.user = {
+        username: '游客'
+        , uid: -1
+        , avatar: 'res/images/avatar/00.jpg'
+        , experience: 83
+        , sex: '男'
+    };
+    layui.config({
+        version: "3.0.0"
+        , base: 'res/mods/' //这里实际使用时，建议改成绝对路径
+    }).extend({
+        fly: 'index'
+    }).use('fly');
 </script>
 
 <script type="text/javascript" language="JavaScript">
-  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-  document.write(
-          unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='"
-                  + cnzz_protocol
-                  + "w.cnzz.com/c.php%3Fid%3D30088308' "
-                  + "type='text/javascript'%3E%3C/script%3E")
-  );
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(
+        unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='"
+            + cnzz_protocol
+            + "w.cnzz.com/c.php%3Fid%3D30088308' "
+            + "type='text/javascript'%3E%3C/script%3E")
+    );
 </script>
 <!--<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));</script>-->
 </body>

@@ -21,7 +21,8 @@
             <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
                 <div class="layui-tab-item layui-show">
                     <div class="layui-form layui-form-pane">
-                        <form method="post" th:action="@{/loginUser}" action="/loginUser" id="from" onsubmit="return check()">
+                        <form method="post" th:action="@{/loginUser}" action="/loginUser" id="from"
+                              onsubmit="return check()">
                             <div class="layui-form-item">
                                 <label for="L_email" class="layui-form-label">用户名</label>
                                 <div class="layui-input-inline">
@@ -93,8 +94,9 @@
 </script>
 <script th:inline="javascript" type="text/javascript">
     var code;
-    var checkCode
-    function check(){
+    var checkCode;
+
+    function check() {
         checkCode = $("#L_vercode").val();
         $.ajax({
             url: 'codes',
@@ -109,9 +111,9 @@
                 return false;
             }
         });
-        if (checkCode.toLowerCase() == code){
+        if (checkCode.toLowerCase() == code) {
             return true;
-        }else {
+        } else {
             alert("验证码错误，请重新输入！");
             return false;
         }

@@ -17,7 +17,7 @@ import java.util.Map;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author author
@@ -33,6 +33,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
 
     /**
      * 分页查询置顶
+     *
      * @param current
      * @param size
      * @return
@@ -45,18 +46,20 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
 
     /**
      * 分页查询总的帖子
+     *
      * @param current
      * @param size
      * @return
      */
     @Override
     public List<Blog_User> listByPageAll(Integer current, Integer size) {
-        List<Blog_User> blog_usersAll =  postMapper.listByPageAll(current, size);
+        List<Blog_User> blog_usersAll = postMapper.listByPageAll(current, size);
         return blog_usersAll;
     }
 
     /**
      * 本周热议
+     *
      * @return
      */
     @Override

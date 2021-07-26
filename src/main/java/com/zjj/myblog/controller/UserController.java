@@ -73,19 +73,20 @@ public class UserController {
      *
      * @return
      */
-    @RequestMapping(value = {"/index","/"})
+    @RequestMapping(value = {"/index", "/"})
     public String index(HttpServletRequest request) {
         HttpSession session = request.getSession();
 //        置顶的帖子
         List<Blog_User> recordsLevel = postService.listByPageLevel(0, 5);
-        session.setAttribute("level",recordsLevel);
+        session.setAttribute("level", recordsLevel);
 //        获取当前页数
         String currentPage = request.getParameter("current");  //3
         if (currentPage == null) {
             current = 1;
         } else {
             double i = Double.valueOf(currentPage);
-            current = new Double(i).intValue();;//3
+            current = new Double(i).intValue();
+            ;//3
         }
 //        储存当前页
         session.setAttribute("current", current);//3
@@ -98,16 +99,17 @@ public class UserController {
         session.setAttribute("count", count);
 //        本周热议
         List<HotBlog> hot = postService.hot();
-        session.setAttribute("hot",hot);
+        session.setAttribute("hot", hot);
 //        回帖总榜
         List<User> users = userService.blogComment();
-        session.setAttribute("blogComment",users);
+        session.setAttribute("blogComment", users);
         return "index";
     }
 
 
     /**
      * 用户中心
+     *
      * @param request
      * @return
      */
@@ -122,6 +124,7 @@ public class UserController {
 
     /**
      * 用户信息设置
+     *
      * @param request
      * @return
      */
@@ -132,6 +135,7 @@ public class UserController {
 
     /**
      * 用户消息
+     *
      * @return
      */
     @RequestMapping("/message")
@@ -141,6 +145,7 @@ public class UserController {
 
     /**
      * 邮箱激活
+     *
      * @return
      */
     @RequestMapping("/active")
@@ -150,6 +155,7 @@ public class UserController {
 
     /**
      * 用户主页
+     *
      * @return
      */
     @RequestMapping("/user/index")
@@ -158,19 +164,20 @@ public class UserController {
     }
 
 
-
     /**
      * 查看帖子
+     *
      * @param id
      * @return
      */
     @RequestMapping("/detail/{id:\\d*}")
-    public String detail(@PathVariable(name = "id")Long id){
+    public String detail(@PathVariable(name = "id") Long id) {
         return "option/detail";
     }
 
     /**
      * 登录的中间处理
+     *
      * @return
      */
     @RequestMapping("/blogHome")
@@ -180,6 +187,7 @@ public class UserController {
 
     /**
      * 测试
+     *
      * @return
      */
     @RequestMapping("/test")

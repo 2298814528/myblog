@@ -69,7 +69,7 @@ public class UserlogController {
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<User>().eq("username", username).eq("password", password);
         User user = userService.getOne(userQueryWrapper);
         if (user == null) {
-            session.setAttribute("error","账号、密码错误");
+            session.setAttribute("error", "账号、密码错误");
             return "user/login";
         } else {
             session.removeAttribute("error");
@@ -85,7 +85,7 @@ public class UserlogController {
             userUpdate.setLasted(lasted);
             userUpdate.setStatus(1);
             QueryWrapper<User> userLast = new QueryWrapper<User>().eq("username", username);
-            userService.update(userUpdate,userLast);
+            userService.update(userUpdate, userLast);
 //            判断是否签到
             QueryWrapper<Usersign> userSign = new QueryWrapper<Usersign>().eq("user", username).eq("signTime", LocalDate.now());
             Map<String, Object> map = usersignService.getMap(userSign);
@@ -102,7 +102,7 @@ public class UserlogController {
             session.setAttribute("day", dayCount);
 //            传入前端用户名
             session.setAttribute("username", username);
-            session.setAttribute("user",user);
+            session.setAttribute("user", user);
 ////            传入前端头像位置
 //            session.setAttribute("avatar", user.getAvatar());
 ////            传入VIP等级
@@ -125,6 +125,7 @@ public class UserlogController {
 
     /**
      * 登出
+     *
      * @param request
      * @return
      */
@@ -139,6 +140,7 @@ public class UserlogController {
 
     /**
      * 生成验证码
+     *
      * @param request
      * @param response
      * @throws IOException
@@ -151,16 +153,17 @@ public class UserlogController {
 
     /**
      * 发送异步获取验证码
+     *
      * @param request
      * @return
      * @throws IOException
      */
     @ResponseBody
     @RequestMapping("/codes")
-    public Map<String,String> codes(HttpServletRequest request) throws IOException {
-        Map<String,String> map=new HashMap<String, String>();
+    public Map<String, String> codes(HttpServletRequest request) throws IOException {
+        Map<String, String> map = new HashMap<String, String>();
         String code = checkCode.getCode();
-        map.put("code",code);
+        map.put("code", code);
         return map;
     }
 

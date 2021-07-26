@@ -37,7 +37,8 @@
                 <div class="layui-form layui-form-pane layui-tab-item layui-show">
                     <form method="post">
                         <div class="layui-form-item">
-                            <label for="L_email" class="layui-form-label">邮箱[(${#httpServletRequest.getContextPath()})]</label>
+                            <label for="L_email"
+                                   class="layui-form-label">邮箱[(${#httpServletRequest.getContextPath()})]</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="L_email" name="email" required lay-verify="email"
                                        autocomplete="off" class="layui-input" th:value="${session.user.email}">
@@ -50,7 +51,7 @@
                             <label for="L_username" class="layui-form-label">昵称</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="L_username" name="username" required lay-verify="required"
-                                       autocomplete="off"  class="layui-input" th:value="${session.username}">
+                                       autocomplete="off" class="layui-input" th:value="${session.username}">
                             </div>
                             <div class="layui-inline">
                                 <div class="layui-input-inline" th:if="${session.user.gender} eq '男'">
@@ -66,19 +67,22 @@
                         <div class="layui-form-item">
                             <label for="L_city" class="layui-form-label">微信号</label>
                             <div class="layui-input-inline">
-                                <input type="text" id="L_city" name="city" autocomplete="off" class="layui-input" th:value="${session.user.wechat}">
+                                <input type="text" id="L_city" name="city" autocomplete="off" class="layui-input"
+                                       th:value="${session.user.wechat}">
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">生日</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input" th:value="${session.user.birthday}">
+                                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd"
+                                       autocomplete="off" class="layui-input" th:value="${session.user.birthday}">
                             </div>
                         </div>
                         <div class="layui-form-item layui-form-text">
                             <label for="L_sign" class="layui-form-label">签名</label>
                             <div class="layui-input-block">
-                                <textarea id="L_sign" name="sign" autocomplete="off" class="layui-textarea" style="height: 80px;resize: none" th:text="${session.user.sign}">
+                                <textarea id="L_sign" name="sign" autocomplete="off" class="layui-textarea"
+                                          style="height: 80px;resize: none" th:text="${session.user.sign}">
 
                                 </textarea>
                             </div>
@@ -108,7 +112,8 @@
                             <label for="L_nowpass" class="layui-form-label">当前密码</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="L_nowpass" name="nowpassword" required lay-verify="required"
-                                       autocomplete="off" class="layui-input" th:value="${session.user.password}" disabled>
+                                       autocomplete="off" class="layui-input" th:value="${session.user.password}"
+                                       disabled>
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -187,7 +192,7 @@
     );
 </script>
 <script>
-    layui.use(['form', 'layedit', 'laydate'], function(){
+    layui.use(['form', 'layedit', 'laydate'], function () {
         laydate = layui.laydate;
 
         //日期

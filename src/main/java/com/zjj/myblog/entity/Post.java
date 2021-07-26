@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author author
@@ -81,7 +81,6 @@ public class Post implements Serializable {
      */
     @TableField("created")
     private Timestamp created;
-
 
 
 }

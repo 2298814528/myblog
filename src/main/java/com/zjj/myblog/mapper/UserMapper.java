@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author author
@@ -16,6 +16,7 @@ import java.util.List;
 public interface UserMapper extends BaseMapper<User> {
     /**
      * 回帖总榜
+     *
      * @return
      */
 

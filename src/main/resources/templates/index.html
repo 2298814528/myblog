@@ -23,32 +23,9 @@
 <div th:replace="common/footer::footer"></div>
 <script src="res/layui/layui.js" type="application/javascript" charset="utf-8"></script>
 <script src="js/footer.js" charset="utf-8"></script>
-<script type="text/javascript" language="JavaScript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(
-        unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='"
-            + cnzz_protocol
-            + "w.cnzz.com/c.php%3Fid%3D30088308' "
-            + "type='text/javascript'%3E%3C/script%3E")
-    );
-</script>
 <script type="application/javascript" src="js/common.js"></script>
 <script type="text/javascript" th:src="@{/jq/jquery-3.4.1.min.js}"></script>
-<!--<script th:inline="javascript" type="text/javascript">-->
-<!--    $.ajax({-->
-<!--        url: "blog",-->
-<!--        method: "POST",-->
-<!--        dataType: 'JSON',-->
-<!--        async: false,-->
-<!--        data: {'current': 1, 'size': 5},-->
-<!--        success: function () {-->
-<!--            console.log("success");-->
-<!--        },-->
-<!--        error: function () {-->
-<!--            console.log("error");-->
-<!--        }-->
-<!--    })-->
-<!--</script>-->
+
 <script th:inline="javascript" type="text/javascript">
     $(function () {
         var msg;
